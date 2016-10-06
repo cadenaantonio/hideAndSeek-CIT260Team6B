@@ -19,6 +19,7 @@ public class Player implements Serializable{
     private double returningPlayer;
 
     public Player() {
+       // this.name = "";
     }
     
     

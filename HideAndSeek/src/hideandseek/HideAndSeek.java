@@ -8,6 +8,7 @@ package hideandseek;
 import byui.cit260.hideAndSeek.model.Inventory;
 import byui.cit260.hideAndSeek.model.Player;
 
+
 /**
  *
  * @author Antonio Cadena
