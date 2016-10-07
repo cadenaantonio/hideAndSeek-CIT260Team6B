@@ -1,4 +1,4 @@
-package byui.cit260.hideAndSeek.model;
+package byui.cit260.HideAndSeek.model;
 
 import java.io.Serializable;
 import java.util.Objects;

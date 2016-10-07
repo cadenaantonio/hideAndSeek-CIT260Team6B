@@ -5,8 +5,8 @@
  */
 package hideandseek;
 
-import byui.cit260.hideAndSeek.model.Inventory;
-import byui.cit260.hideAndSeek.model.Player;
+import byui.cit260.HideAndSeek.model.Inventory;
+import byui.cit260.HideAndSeek.model.Player;
 
 
 /**
