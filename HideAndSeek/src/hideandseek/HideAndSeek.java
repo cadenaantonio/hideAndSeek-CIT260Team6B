@@ -15,10 +15,7 @@ import byui.cit260.HideAndSeek.model.Player;
  */
 public class HideAndSeek {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+    public static void teamTest() {
         Player playerOne = new Player();
         
         playerOne.setName("Meg");
@@ -35,6 +32,29 @@ public class HideAndSeek {
         
         String inventoryInfo = inventoryOne.toString();
         System.out.println(inventoryInfo);
+    }
+    
+    public static void antonioTest() {
+        //insert individual test code here!
+    }
+    
+    public static void megTest() {
+        //insert individual test code here!
+    }
+    
+    public static void joelTest() {
+        //insert individual test code here!
+    }
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        teamTest();
+        //antonioTest();
+        //megTest();
+        //joelTest();
         
     }
     
