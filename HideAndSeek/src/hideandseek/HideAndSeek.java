@@ -7,6 +7,9 @@ package hideandseek;
 
 import byui.cit260.HideAndSeek.model.Inventory;
 import byui.cit260.HideAndSeek.model.Player;
+import byui.cit260.HideAndSeek.model.Actor;
+import byui.cit260.HideAndSeek.model.Location;
+import byui.cit260.HideAndSeek.model.Map;
 
 
 /**
@@ -44,6 +47,30 @@ public class HideAndSeek {
     
     public static void joelTest() {
         //insert individual test code here!
+        Actor actorOne = new Actor();
+        
+        actorOne.setName("Joel");
+        actorOne.setDescription("Superhero of this city.");
+        actorOne.setAbility("Power-suit");
+        
+        String actorInfo = actorOne.toString();
+        System.out.println(actorInfo);
+        
+        Map mapOne = new Map();
+        
+        mapOne.setRowCount(15);
+        mapOne.setColumnCount(5);
+        
+        String mapInfo = mapOne.toString();
+        System.out.println(mapInfo);
+        
+        Location locationOne = new Location();
+        
+        locationOne.setVisited("Yes");
+        locationOne.setDescription("You're at your hideout.");
+        
+        String locationInfo = locationOne.toString();
+        System.out.println(locationOne);
     }
     
     /**
