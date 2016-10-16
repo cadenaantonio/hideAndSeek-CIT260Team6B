@@ -8,8 +8,11 @@ package hideandseek;
 import byui.cit260.HideAndSeek.model.Inventory;
 import byui.cit260.HideAndSeek.model.Player;
 import byui.cit260.HideAndSeek.model.Actor;
+import byui.cit260.HideAndSeek.model.Bombs;
+import byui.cit260.HideAndSeek.model.Game;
 import byui.cit260.HideAndSeek.model.Location;
 import byui.cit260.HideAndSeek.model.Map;
+import byui.cit260.HideAndSeek.model.Villain;
 
 
 /**
@@ -39,6 +42,37 @@ public class HideAndSeek {
     
     public static void antonioTest() {
         //insert individual test code here!
+        
+        Game gameOne = new Game();
+        
+        gameOne.setInstruction("Follow the Instructions!");
+        gameOne.setMenu("This is the menu.");
+        
+        String gameInfo = gameOne.toString();
+        System.out.println(gameInfo);
+        
+        
+        
+        
+        Bombs bombsOne = new Bombs();
+        
+        bombsOne.setTypeOfBomb("Make it rain!");
+        bombsOne.setDescription("Make it rain: This bomb makes it rain fire, of biblical proportions, from the heavens making even the strongest villan weak in the knees.");
+        
+        String bombsInfo = bombsOne.toString();
+        System.out.println(bombsInfo);
+        
+        
+        
+        
+        Villain villainOne = new Villain();
+        
+        villainOne.setName("Dave");
+        villainOne.setDescription("Dave is lonely man who enjoys making everyones misserably by placing bombs around the city.");
+        
+        String villainInfo = villainOne.toString();
+        System.out.println(villainInfo);
+        
     }
     
     public static void megTest() {
@@ -79,7 +113,7 @@ public class HideAndSeek {
     public static void main(String[] args) {
         
         teamTest();
-        //antonioTest();
+        antonioTest();
         //megTest();
         //joelTest();
         
