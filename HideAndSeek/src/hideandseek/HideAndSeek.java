@@ -10,9 +10,13 @@ import byui.cit260.HideAndSeek.model.Player;
 import byui.cit260.HideAndSeek.model.Actor;
 import byui.cit260.HideAndSeek.model.Bombs;
 import byui.cit260.HideAndSeek.model.Game;
+import byui.cit260.HideAndSeek.model.Hero;
+import byui.cit260.HideAndSeek.model.Items;
 import byui.cit260.HideAndSeek.model.Location;
 import byui.cit260.HideAndSeek.model.Map;
+import byui.cit260.HideAndSeek.model.Questions;
 import byui.cit260.HideAndSeek.model.Villain;
+import byui.cit260.HideAndSeek.model.Weapon;
 
 
 /**
@@ -72,6 +76,46 @@ public class HideAndSeek {
         
         String villainInfo = villainOne.toString();
         System.out.println(villainInfo);
+        
+        
+        
+        
+        Questions questionsOne = new Questions();
+        
+        questionsOne.setDescription("What is 1 + 2?");
+        
+        String questionsInfo = questionsOne.toString();
+        System.out.println(questionsInfo);
+        
+        
+        
+        
+        Hero heroOne = new Hero();
+        
+        heroOne.setUsed("What this item used?");
+        
+        String heroInfo = heroOne.toString();
+        System.out.println(heroInfo);
+        
+        
+        
+        
+        Weapon weaponOne = new Weapon();
+        
+        weaponOne.setTypeOfWeapon("Knife");
+        
+        String weaponInfo = weaponOne.toString();
+        System.out.println(weaponInfo);
+        
+        
+        
+        
+        Items itemsOne = new Items();
+        
+        itemsOne.setAddToInventory("Add to inventory?");
+        
+        String itemsInfo = itemsOne.toString();
+        System.out.println(itemsInfo);
         
     }
     
