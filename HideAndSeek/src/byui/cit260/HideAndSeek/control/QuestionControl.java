@@ -25,4 +25,76 @@ public class QuestionControl {
         return areaR;
     }
     
+    public double calcVolumeSphere(double radius) {
+        if (radius < 0 || radius > 45) {
+            return -1;
+        }
+        
+        double volume = Math.pow(radius, 3)* Math.PI * 4/3 ;
+        double volumeR = Math.round(volume * 100.0) / 100.0;
+        
+        return volumeR;
+    }
+    
+    public double calcAreaBox(double length, double width, double height){
+        if (length < 0 || length > 38) {
+            return -1;
+        }
+        if(width < 0 || width > 42) {
+            return -1;
+        }
+        if(height < 0 || height > 50) {
+            return -1;
+        }
+        
+        double area = 2 * (height * width) + 2 * (height * length) + 2 * (width * length);
+        double areaR = Math.round(area * 100.0) / 100.0;
+        
+        return areaR;
+    }
+    
+    public double calcVolumePyramid (double length, double width, double height) {
+        if (length < 0 || length > 10) {
+            return -1;
+        }
+        if(width < 0 || width > 10) {
+            return -1;
+        }
+        if(height < 0 || height > 10) {
+            return -1;
+        }
+        
+        double volume = length * width * height / 3;
+        double volumeR= Math.round(volume * 100.0) / 100.0;
+        
+        return volumeR;
+    }
+    
+    public double calcAddition (double var1, double var2) {
+        if (var1 < 0 || var1 > 99) {
+            return -1;
+        }
+        if (var2 < 0 || var2 > 99) {
+            return -1;
+        }
+        
+        double addition = var1 + var2;
+        double additionR = Math.round(addition * 100.0) /100.0;
+        
+        return additionR;
+    }
+    
+    public double calcSubtraction (double var1, double var2) {
+        if (var1 < 0 || var1 > 99) {
+            return -1;
+        }
+        if (var2 < 0 || var2 > 99) {
+            return -1;
+        }
+        
+        double subtraction = var1 - var2;
+        double subtractionR = Math.round(subtraction * 100.0) /100.0;
+        
+        return subtractionR;
+    }
 }
