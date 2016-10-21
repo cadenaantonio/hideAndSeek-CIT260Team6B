@@ -97,4 +97,34 @@ public class QuestionControl {
         
         return subtractionR;
     }
+    
+    public double calcMultiplication(double var1, double var2){
+        if(var1 < 0 || var1 > 99){
+            return -1;
+        }
+        
+        if(var2 < 0 | var2 > 99){
+            return -1;
+        }
+        
+        double multiplication = var1 * var2;
+        
+        return multiplication;
+
+    }
+    
+    public double calcDivision(double var1, double var2){
+        if(var1 < 0 || var1 > 99){
+            return -1;
+        }
+        
+        if(var2 < 1 || var2 > 99){
+	return -1;
+        }
+        
+        double division = var1 / var2;
+        double divisionR = Math.round(division * 100.0) /100.0;
+        
+        return division;
+    }
 }

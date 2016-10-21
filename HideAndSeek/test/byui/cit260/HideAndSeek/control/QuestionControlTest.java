@@ -346,4 +346,112 @@ public class QuestionControlTest {
         result = instance.calcSubtraction(var1, var2);
         assertEquals(expResult, result, 0.0001);
     }
+    
+        @Test
+    public void testcalcMultiplication() {
+        System.out.println("calcMultiplication Test case #1");
+        double var1 = 2;
+        double var2 = 14;
+        QuestionControl instance = new QuestionControl();
+        double expResult = 28;
+        double result = instance.calcMultiplication(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        
+        System.out.println("calcMultiplication Test case #2");
+        var1 = -4;
+        var2 = 9;
+        expResult = -1;
+        result = instance.calcMultiplication(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcMultiplication Test case #3");
+        var1 = 6;
+        var2 = -7;
+        expResult = -1;
+        result = instance.calcMultiplication(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcMultiplication Test case #4");
+        var1 = 201;
+        var2 = 5;
+        expResult = -1;
+        result = instance.calcMultiplication(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcMultiplication Test case #5");
+        var1 = 0;
+        var2 = 99;
+        expResult = 0;
+        result = instance.calcMultiplication(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcMultiplication Test case #6");
+        var1 = 99;
+        var2 = 0;
+        expResult = 0;
+        result = instance.calcMultiplication(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcMultiplication Test case #7");
+        var1 = 99;
+        var2 = 99;
+        expResult = 9801;
+        result = instance.calcMultiplication(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+    }
+    
+            @Test
+    public void testcalcDivision() {
+        System.out.println("calcDivision Test case #1");
+        double var1 = 6;
+        double var2 = 8;
+        QuestionControl instance = new QuestionControl();
+        double expResult = 0.75;
+        double result = instance.calcDivision(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        
+        System.out.println("calcDivision Test case #2");
+        var1 = -5;
+        var2 = 4;
+        expResult = -1;
+        result = instance.calcDivision(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcDivision Test case #3");
+        var1 = 9;
+        var2 = -7;
+        expResult = -1;
+        result = instance.calcDivision(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcDivision Test case #4");
+        var1 = 217;
+        var2 = 5;
+        expResult = -1;
+        result = instance.calcDivision(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcDivision Test case #5");
+        var1 = 0;
+        var2 = 99;
+        expResult = 0;
+        result = instance.calcDivision(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcDivision Test case #6");
+        var1 = 99;
+        var2 = 1;
+        expResult = 99;
+        result = instance.calcDivision(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcDivision Test case #7");
+        var1 = 99;
+        var2 = 99;
+        expResult = 1;
+        result = instance.calcDivision(var1, var2);
+        assertEquals(expResult, result, 0.0001);
+    }
 }
