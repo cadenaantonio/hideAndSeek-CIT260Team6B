@@ -26,6 +26,12 @@ public class QuestionControlTest {
         double expResult = 150.8;
         double result = instance.calcAreaBarrel(radius, height);
         assertEquals(expResult, result, 0.0001);
+
+        System.out.println("calcAreaBarrel Test case #2");
+        radius = -3;
+        height = 5;
+        expResult = -1;
+        result = instance.calcAreaBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
     }
-    
 }
