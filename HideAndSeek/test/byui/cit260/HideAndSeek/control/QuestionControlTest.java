@@ -20,8 +20,8 @@ public class QuestionControlTest {
     @Test
     public void testCalcAreaBarrel() {
         System.out.println("calcAreaBarrel Test case #1");
-        double height = 5;
         double radius = 3;
+        double height = 5;
         QuestionControl instance = new QuestionControl();
         double expResult = 150.8;
         double result = instance.calcAreaBarrel(radius, height);
