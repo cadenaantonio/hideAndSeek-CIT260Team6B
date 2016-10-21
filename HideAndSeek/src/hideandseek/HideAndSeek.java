@@ -158,8 +158,8 @@ public class HideAndSeek {
         
         teamTest();
         antonioTest();
-        //megTest();
-        //joelTest();
+        megTest();
+        joelTest();
         
     }
     
