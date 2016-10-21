@@ -33,5 +33,40 @@ public class QuestionControlTest {
         expResult = -1;
         result = instance.calcAreaBarrel(radius, height);
         assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcAreaBarrel Test case #3");
+        radius = 3;
+        height = -5;
+        expResult = -1;
+        result = instance.calcAreaBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcAreaBarrel Test case #4");
+        radius = 5;
+        height = 13;
+        expResult = -1;
+        result = instance.calcAreaBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
+        
+       System.out.println("calcAreaBarrel Test case #5");
+        radius = 0;
+        height = 11;
+        expResult = 0;
+        result = instance.calcAreaBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcAreaBarrel Test case #6");
+        radius = 12;
+        height = 0;
+        expResult = 904.78;
+        result = instance.calcAreaBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcAreaBarrel Test case #7");
+        radius = 12;
+        height = 11;
+        expResult = 1734.16;
+        result = instance.calcAreaBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
     }
 }
