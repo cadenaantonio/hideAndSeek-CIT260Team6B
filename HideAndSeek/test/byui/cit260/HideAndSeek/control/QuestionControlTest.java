@@ -492,5 +492,58 @@ public class QuestionControlTest {
         expResult =2600;
         result = instance.calcDiameterOfBarrel(radius);
         assertEquals(expResult, result, 0.0001);
-    }  
+    }
+       @Test
+    public void testcalcRadiusBarrel() {
+        System.out.println("calcRadiusBarrel Test case #1");
+        double volume =20;
+        double height =5;
+        QuestionControl instance = new QuestionControl();
+        double expResult =1.13;
+        double result = instance.calcRadiusBarrel(volume, height);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcRadiusBarrel Test case #2");
+        volume =-18;
+        height =6;
+        expResult =-1;
+        result = instance.calcRadiusBarrel(volume, height);
+        assertEquals(expResult, result, 0.0001);
+        
+     System.out.println("calcRadiusBarrel Test case #3");
+        volume =7;
+        height =-54;
+        expResult =-1;
+        result = instance.calcRadiusBarrel(volume, height);
+        assertEquals(expResult, result, 0.0001);
+        
+    System.out.println("calcRadiusBarrel Test case #4");
+        volume =11;
+        height =30;
+        expResult =-1;
+        result = instance.calcRadiusBarrel(volume, height);
+        assertEquals(expResult, result, 0.0001);
+        
+    System.out.println("calcRadiusBarrel Test case #5");
+        volume =0;
+        height =9;
+        expResult =0;
+        result = instance.calcRadiusBarrel(volume, height);
+        assertEquals(expResult, result, 0.0001);
+    
+        System.out.println("calcRadiusBarrel Test case #6");
+        volume =50;
+        height =1;
+        expResult =3.99;
+        result = instance.calcRadiusBarrel(volume, height);
+        assertEquals(expResult, result, 0.0001);
+    
+         System.out.println("calcRadiusBarrel Test case #7");
+        volume =50;
+        height =9;
+        expResult =1.33;
+        result = instance.calcRadiusBarrel(volume, height);
+        assertEquals(expResult, result, 0.0001);
+    
+    }
 }
