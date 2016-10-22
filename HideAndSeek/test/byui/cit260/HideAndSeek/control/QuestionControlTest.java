@@ -454,4 +454,43 @@ public class QuestionControlTest {
         result = instance.calcDivision(var1, var2);
         assertEquals(expResult, result, 0.0001);
     }
+        @Test
+    public void testcalcDiameterOfBarrel() {
+        System.out.println("calcDiameterOfBarrel Test case #1");
+        double radius =2;
+        QuestionControl instance = new QuestionControl();
+        double expResult =4;
+        double result = instance.calcDiameterOfBarrel(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+         System.out.println("calcDiameterOfBarrel Test case #2");
+        radius =-65;
+        expResult =-1;
+        result = instance.calcDiameterOfBarrel(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+         System.out.println("calcDiameterOfBarrel Test case #3");
+        radius =1301;
+        expResult =-1;
+        result = instance.calcDiameterOfBarrel(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+         System.out.println("calcDiameterOfBarrel Test case #5");
+        radius =0;
+        expResult =0;
+        result = instance.calcDiameterOfBarrel(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+         System.out.println("calcDiameterOfBarrel Test case #6");
+        radius =1300;
+        expResult =2600;
+        result = instance.calcDiameterOfBarrel(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+         System.out.println("calcDiameterOfBarrel Test case #7");
+        radius =1300;
+        expResult =2600;
+        result = instance.calcDiameterOfBarrel(radius);
+        assertEquals(expResult, result, 0.0001);
+    }  
 }

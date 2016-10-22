@@ -127,4 +127,13 @@ public class QuestionControl {
         
         return division;
     }
+    public double calcDiameterOfBarrel (double radius){
+        if(radius < 0 || radius > 1300){
+            return -1;
+    }
+        double diameter = radius * 2;
+        double diameter2 = Math.round(diameter *100.0)/100.0;
+        
+        return diameter2;
+    }
 }
