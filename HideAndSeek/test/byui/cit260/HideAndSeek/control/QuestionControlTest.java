@@ -651,4 +651,53 @@ public class QuestionControlTest {
         assertEquals(expResult, result, 0.0001);
        
     }
+    
+
+    @Test
+    public void testcalcDiameterSphere() {
+        System.out.println("calcDiameterSphere Test case #1");
+        double radius = 9;
+        QuestionControl instance = new QuestionControl();
+        double expResult =18;
+        double result = instance.calcDiameterSphere(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcDiameterSphere Test case #2");
+        radius = -9;
+        expResult =-1;
+        result = instance.calcDiameterSphere(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcDiameterSphere Test case #3");
+        radius = 200;
+        expResult =-1;
+        result = instance.calcDiameterSphere(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcDiameterSphere Test case #4");
+        radius = 145;
+        expResult =-1;
+        result = instance.calcDiameterSphere(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcDiameterSphere Test case #5");
+        radius = 0;
+        expResult =0;
+        result = instance.calcDiameterSphere(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        
+        System.out.println("calcDiameterSphere Test case #6");
+        radius = 100;
+        expResult =200;
+        result = instance.calcDiameterSphere(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcDiameterSphere Test case #7");
+        radius = 100;
+        expResult =200;
+        result = instance.calcDiameterSphere(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+    }
 }
