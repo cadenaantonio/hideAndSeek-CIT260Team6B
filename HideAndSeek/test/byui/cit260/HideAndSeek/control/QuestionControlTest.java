@@ -545,5 +545,110 @@ public class QuestionControlTest {
         result = instance.calcRadiusBarrel(volume, height);
         assertEquals(expResult, result, 0.0001);
     
+    }        
+         @Test
+    public void testcalcVolumeBarrel() {
+        System.out.println("calcVolumeBarrel Test case #1");
+        double radius = 3;
+        double height = 5;
+        QuestionControl instance = new QuestionControl();
+        double expResult =141.37;
+        double result = instance.calcVolumeBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcVolumeBarrel Test case #2");
+        radius = -12;
+        height = 6;
+        expResult =-1;
+        result = instance.calcVolumeBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcVolumeBarrel Test case #3");
+        radius = 9;
+        height = -4;
+        expResult =-1;
+        result = instance.calcVolumeBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcVolumeBarrel Test case #4");
+        radius = 24;
+        height = 6;
+        expResult =-1;
+        result = instance.calcVolumeBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcVolumeBarrel Test case #5");
+        radius = 0;
+        height = 2;
+        expResult =0;
+        result = instance.calcVolumeBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcVolumeBarrel Test case #6");
+        radius = 15;
+        height = 0;
+        expResult =0;
+        result = instance.calcVolumeBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcVolumeBarrel Test case #7");
+        radius = 15;
+        height = 24;
+        expResult =16964.6;
+        result = instance.calcVolumeBarrel(radius, height);
+        assertEquals(expResult, result, 0.0001);
+    }
+    
+    
+    @Test
+    public void testcalcAreaCircle() {
+        System.out.println("calcAreaCircle Test case #1");
+        double radius = 8;
+        QuestionControl instance = new QuestionControl();
+        double expResult =201.06;
+        double result = instance.calcAreaCircle(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        System.out.println("calcAreaCircle Test case #2");
+        radius = -4;
+        expResult =-1;
+        result = instance.calcAreaCircle(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        
+        System.out.println("calcAreaCircle Test case #3");
+        radius = -6;
+        expResult =-1;
+        result = instance.calcAreaCircle(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        
+        System.out.println("calcAreaCircle Test case #4");
+        radius = 80;
+        expResult =-1;
+        result = instance.calcAreaCircle(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        
+        System.out.println("calcAreaCircle Test case #5");
+        radius = 0;
+        expResult =0;
+        result = instance.calcAreaCircle(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        
+        System.out.println("calcAreaCircle Test case #6");
+        radius = 0;
+        expResult =0;
+        result = instance.calcAreaCircle(radius);
+        assertEquals(expResult, result, 0.0001);
+        
+        
+        System.out.println("calcAreaCircle Test case #7");
+        radius = 26;
+        expResult =2123.72;
+        result = instance.calcAreaCircle(radius);
+        assertEquals(expResult, result, 0.0001);
+       
     }
 }
