@@ -136,4 +136,46 @@ public class QuestionControl {
         
         return diameter2;
     }
+    
+    public double calcRadiusBarrel(double volume, double height){
+        if(volume < 0 || volume >50)
+            return -1;
+        if (height <0 || height >9)
+            return -1;
+    
+    double radius = Math.sqrt(volume / (Math.PI * height));
+    double radius2 = Math.round(radius *100.0)/100.0;
+    
+    return radius2;
+}
+    public double calcVolumeBarrel(double radius, double height){
+        if(radius <0 || radius > 15)
+            return -1;
+        if(height <0 || height > 24)
+            return -1;
+        
+           double volume = Math.PI * Math.pow(radius, 2) * height;
+           double volume2= Math.round(volume*100.0)/100.0;
+           return volume2;
+    }
+    
+    public double calcAreaCircle(double radius){
+        if(radius <0 || radius >26)
+            return -1;
+        
+            double area = Math.PI * Math.pow(radius, 2);
+            double area2 = Math.round(area *100.0)/100.0;
+            
+            return area2;
+    }
+    
+    public double calcDiameterSphere(double radius){
+        if(radius<0 || radius>100)
+            return -1;
+        
+            double diameter= radius * 2;
+            double diameter2= Math.round(diameter*100.0)/100.0;
+            
+            return diameter2;
+    }
 }
