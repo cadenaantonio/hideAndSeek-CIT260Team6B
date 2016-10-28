@@ -5,6 +5,10 @@
  */
 package citbyui.cit260.HideAndSeek.view;
 
+import byui.cit260.HideAndSeek.control.GameControl;
+import byui.cit260.HideAndSeek.model.Player;
+import java.util.Scanner;
+
 /**
  *
  * @author DragonMaster
@@ -54,14 +58,46 @@ public class StartProgramView {
         }
 
     private String getPlayersName() {
-        System.out.println("\n*** getPlayerName() called***");
-        return "Joesph";
+        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+        String value =""; //value to be returned
+        boolean valid = false; //initialize to not valid
+        
+        while (!valid){//loop while an invalid value is entered
+            System.out.println("\n" + this.promptMessage);
+        
+            value = keyboard.nextLine();//get next line typed on keyboard
+            value = value.trim();//trim off leading and trailing blanks
+            
+            if (value.length()< 1){// value is blank
+               System.out.println("\nInvalid value: Value can not be blank") ;
+               continue;
+            }
+            break; //end the loop
+        }
+        return value; // return the value entered
     }
 
     private boolean doAction(String playersName) {
-        System.out.println("\n*** doAction() called***");
+        if(playersName.length()<2){
+            System.out.println("\nInvalid players name: "
+                        + "The name must be greater than one character in length");
+            return false;
+        }
+        // call createPlayer() control function
+    Player player = GameControl.createPlayer(playersName);
+
+            if(player == null){// in unsuccessful
+                System.out.println("\nError creating the player.");
+                return false;
+            }       
+        //display next view
+        this.displayNextView(player);
         return true;
     }
-    
-    
-}
+
+    private void displayNextView(Player player) {
+        System.out.println("\n***displayNextView() called ***");
+    }
+        
+    }
+

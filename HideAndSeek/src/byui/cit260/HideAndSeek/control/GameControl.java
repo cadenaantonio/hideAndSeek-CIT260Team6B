@@ -5,10 +5,18 @@
  */
 package byui.cit260.HideAndSeek.control;
 
+import byui.cit260.HideAndSeek.model.Player;
+
 /**
  *
  * @author DragonMaster
  */
 public class GameControl {
+
+    public static Player createPlayer(String playersName) {
+        System.out.println("\n*** createPlayer() function called ***");
+        return new Player();
+    }
+    
     
 }
