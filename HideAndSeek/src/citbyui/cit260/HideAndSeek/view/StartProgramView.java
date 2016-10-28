@@ -28,12 +28,13 @@ public class StartProgramView {
                 "\n***************************************************************"
                 + "\n***************************************************************"
                 + "\n***************************************************************"
-                + "\n*------You have entered a world where evil dragons rule.------*"
-                + "\n*---Darkness is covering the land and hope is disappearing.---*"
-                + "\n*---The only way to bring light and peace to the land is to---*"
-                + "\n*----defeat the Evil Dragon Lord with two mystical stones.----*"
-                + "\n*---Battle the Evil Dragon Lord's monsters and minions and----*"
-                + "\n*-collect the mystical stones to stop the spread of his evil.-*"
+                + "\n*-----A super-villain, Maul, is loose in the streets.-----*"
+                + "\n*------He has planted bombs around The Emerald City.------*"
+                + "\n*----Can you help us catch him and stop his evil plan?----*"
+                + "\n*-----You’ll have to solve equations set on the bombs.-----*"
+                + "\n*----As you go forward you will have the chance to gain----*"
+                + "\n*--allies as well as their special abilities to help you.--*"
+                + "\n*---We hope that YOU will be able to save our fair city!---*"
                 + "\n***************************************************************"
                 + "\n***************************************************************"
                 + "\n***************************************************************"
@@ -98,7 +99,7 @@ public class StartProgramView {
     private void displayNextView(Player player) {
         System.out.println("\n=========================================="
                             +"\n Welcome to the game " + player.getName()
-                            +"\n We hope you ahve a lot of fun!"
+                            +"\n We hope you have a lot of fun!"
                             +"\n========================================"
                             );
         
