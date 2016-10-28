@@ -6,6 +6,7 @@
 package byui.cit260.HideAndSeek.control;
 
 import byui.cit260.HideAndSeek.model.Player;
+import hideandseek.HideAndSeek;
 
 /**
  *
@@ -13,9 +14,18 @@ import byui.cit260.HideAndSeek.model.Player;
  */
 public class GameControl {
 
-    public static Player createPlayer(String playersName) {
-        System.out.println("\n*** createPlayer() function called ***");
-        return new Player();
+    public static Player createPlayer(String name) {
+        
+        if (name == null) {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(name);
+        
+        HideAndSeek.setPlayer(player); // save the player
+        
+        return player;
     }
     
     

@@ -26,6 +26,9 @@ import citbyui.cit260.HideAndSeek.view.StartProgramView;
  */
 public class HideAndSeek {
 
+    private static Game currentGame = null;
+    private static Player player = null;
+    
     public static void teamTest() {
         Player playerOne = new Player();
         
@@ -161,6 +164,22 @@ public class HideAndSeek {
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
         
+    }
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        HideAndSeek.currentGame = currentGame;
+    }
+    
+    public static Player getPlayer() {
+        return player;
+    }
+    
+    public static void setPlayer(Player player) {
+        HideAndSeek.player = player;
     }
     
 }
