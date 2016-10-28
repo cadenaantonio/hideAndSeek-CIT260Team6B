@@ -17,6 +17,7 @@ import byui.cit260.HideAndSeek.model.Map;
 import byui.cit260.HideAndSeek.model.Questions;
 import byui.cit260.HideAndSeek.model.Villain;
 import byui.cit260.HideAndSeek.model.Weapon;
+import citbyui.cit260.HideAndSeek.view.StartProgramView;
 
 
 /**
@@ -156,10 +157,9 @@ public class HideAndSeek {
      */
     public static void main(String[] args) {
         
-        teamTest();
-        antonioTest();
-        megTest();
-        joelTest();
+        // create StartProgramViewOrig and display the start program view
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
         
     }
     
