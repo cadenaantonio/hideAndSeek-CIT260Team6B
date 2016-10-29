@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package citbyui.cit260.HideAndSeek.view;
+package byui.cit260.HideAndSeek.view;
 
 import byui.cit260.HideAndSeek.control.GameControl;
 import byui.cit260.HideAndSeek.model.Player;

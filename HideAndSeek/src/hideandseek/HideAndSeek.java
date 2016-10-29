@@ -17,7 +17,7 @@ import byui.cit260.HideAndSeek.model.Map;
 import byui.cit260.HideAndSeek.model.Questions;
 import byui.cit260.HideAndSeek.model.Villain;
 import byui.cit260.HideAndSeek.model.Weapon;
-import citbyui.cit260.HideAndSeek.view.StartProgramView;
+import byui.cit260.HideAndSeek.view.StartProgramView;
 
 
 /**
