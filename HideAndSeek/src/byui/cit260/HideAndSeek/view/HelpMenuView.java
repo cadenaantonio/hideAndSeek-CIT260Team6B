@@ -5,19 +5,17 @@
  */
 package byui.cit260.HideAndSeek.view;
 
-import byui.cit260.HideAndSeek.control.GameControl;
-import hideandseek.HideAndSeek;
 import java.util.Scanner;
 
 /**
  *
- * @author Antonio Cadena
+ * @author Katherine
  */
-public class MainMenuView {
-
+public class HelpMenuView {
+    
     private String promptMessage;
 
-    void displayMainMenuView() {
+    void displayHelpMenuView() {
         
         boolean done = false; // set flag to not done
         do {
@@ -39,12 +37,13 @@ public class MainMenuView {
         while (!valid){//loop while an invalid value is entered
             System.out.println("\n"
                 + "\n-----------------------------------------------"
-                + "\n| Main Menu                                    "
+                + "\n| Help Menu                                    "
                 + "\n-----------------------------------------------"
-                + "\nN - Start New Game"
-                + "\nG - Get and Start Saved Game"
-                + "\nH - Get help on how to play the game"
-                + "\nS - Save Game"
+                + "\nG - Goal of Game"
+                + "\nM - How to move"
+                + "\nA - How to use Abilities"
+                + "\nB - How to defuse Bomb"
+                + "\nC - How to Capture Criminal"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------------");
         
@@ -65,17 +64,20 @@ public class MainMenuView {
         choice = choice.toUpperCase(); // convert choice to upper case
 
         switch (choice) {
-            case "N": // create
-                this.startNewGame();
+            case "G": // Goal of Game
+                System.out.println("Goal of Game");
                 break;
-            case "G": // get and start an existing game 
-                this.startExsitingGame();
+            case "M": // How to move 
+                System.out.println("How to move");
                 break;
-            case "H": // display the help menu 
-                this.displayHelpMenu();
+            case "A": // How to use Abilities 
+                System.out.println("How to use Abilities");
                 break;
-            case "S": // save the current game
-                this.saveGame();
+            case "B": // How to defuse Bomb
+                System.out.println("How to defuse Bomb");
+                break;
+            case "C": // How to capture criminal
+                System.out.println("How to capture criminal");
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
@@ -85,27 +87,4 @@ public class MainMenuView {
         return false;
 
     }
-
-    private void startNewGame() {
-            // create a new game
-        GameControl.createNewGame(HideAndSeek.getPlayer());
-        
-        // display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-    }
-
-    private void startExsitingGame() {
-        System.out.println("\n*** startExistingGame function called ***");
-    }
-
-    private void displayHelpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
-    }
-
-    private void saveGame() {
-        System.out.println("\n*** startSaveGame function called ***");
-    }
-    
 }
