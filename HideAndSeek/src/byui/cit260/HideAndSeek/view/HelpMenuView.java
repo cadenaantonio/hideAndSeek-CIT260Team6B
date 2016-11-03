@@ -65,19 +65,44 @@ public class HelpMenuView {
 
         switch (choice) {
             case "G": // Goal of Game
-                System.out.println("Goal of Game");
+                System.out.println("\nGoal of Game"
+                                  +"\nThe Goal of the game is to answer math questions"
+                                  +"\nto either disarm the bombs or cature the ciminal that set them."
+                                  +"\nFail to disarm the bomb 3 times or capture the villain,"
+                                  +"\nthe game is over.");
                 break;
             case "M": // How to move 
-                System.out.println("How to move");
+                System.out.println("\nHow to move"
+                                  +"\nEach selection made will move you one space"
+                                  +"\nin that direction."
+                                  +"\nU - Move Up"
+                                  +"\nD - Move Down"
+                                  +"\nL - Move Left"
+                                  +"\nR - Move Right");
                 break;
             case "A": // How to use Abilities 
-                System.out.println("How to use Abilities");
+                System.out.println("\nHow to use Abilities"
+                                  +"\nTo use your abillity, you must gain an ally"
+                                  +"\nto gain their abillity. Each ablility has a"
+                                  +"\ndifferent effect. Each abillity can run out"
+                                  +"\nof points but can be refilled with special"
+                                  +"\npotions bought at the store.");
                 break;
             case "B": // How to defuse Bomb
-                System.out.println("How to defuse Bomb");
+                System.out.println("\nHow to defuse Bomb"
+                                  +"\nTo defuse the bombs, you must have the knife"
+                                  +"\nand the ice gun. You will also need to answer a math"
+                                  +"\nquestion. Answer it correctly and the bomb"
+                                  +"\nwill be defused. Get the answer wrong 3 times,"
+                                  +"\nthe bomb will explode and the game is over."
+                                  +"\n(add more?)");
                 break;
             case "C": // How to capture criminal
-                System.out.println("How to capture criminal");
+                System.out.println("\nHow to capture criminal"
+                                  +"\nTo capture the criminal, you will need the Handcuffs."
+                                  +"\nYou will also need to answer three math questions to capture him."
+                                  +"\nAnswer them correctly, and they will be captured."
+                                  +"\nGet one wrong and the criminal will find a new hiding spot.");
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
