@@ -143,7 +143,9 @@ class GameMenuView {
     }
 
     private void displayInventoryMenu() {
-        System.out.println("\n*** displayInventoryMenu function called ***");
+        // call InventoryMenuView class
+        InventoryMenuView inventoryMenu = new InventoryMenuView();
+        inventoryMenu.displayInventoryMenuView();
     }
 
     private void viewMap() {
