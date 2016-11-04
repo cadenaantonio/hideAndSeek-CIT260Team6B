@@ -28,17 +28,6 @@ public class InventoryMenuView {
     }
         
     private String getMenuOption() {
-        System.out.println("\n*** getMenuOption() funtion called");
-        return "N";
-    }
-
-    private boolean doAction(String menuOption) {
-        System.out.println("\n*** doAction() funtion called.");
-        return true;
-    }
-        
-    public String getInput() {
-    
         Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
         String selection = null;
@@ -71,30 +60,35 @@ public class InventoryMenuView {
 
         return selection;
     }
-    
-    public void doAction(char choice) {
+
+    private boolean doAction(String choice) {
+            
+        choice = choice.toUpperCase(); // convert choice to upper case
+        
         switch (choice) {
-            case 'S': //ability potion
+            case "S": //ability potion
                 this.useAbilityPotion();
                 break;
-            case 'E': //ability elixer
+            case "E": //ability elixer
                 this.useAbilityElixer();
                 break;
-            case 'F': //use knife
+            case "F": //use knife
                 this.useKnife();
                 break;
-            case 'D': // use ice gun
+            case "D": // use ice gun
                 this.useIceGun();
                 break;
-            case 'C': // use handcuffs
+            case "C": // use handcuffs
                 this.useHandcuffs();
                 break;
-            case 'Q': //  Exit Inventory Menu
-                return;
+            
             default:
                 System.out.println("\n*** Invalid selection *** Try Again");
                 break;
         }
+        
+        return false;
+        
     }
 
     private void useAbilityPotion() {
