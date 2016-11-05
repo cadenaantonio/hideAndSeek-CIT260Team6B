@@ -140,7 +140,9 @@ class GameMenuView {
     }
 
     private void displayHeroAbilityMenu() {
-        System.out.println("\n*** displayHeroAbilityMenu function called ***");
+         // call HeroAbilityView class
+        HeroAbilityView HeroAbilityMenu = new HeroAbilityView();
+        HeroAbilityMenu.displayHeroAbilityView();
     }
 
     private void displayInventoryMenu() {
