@@ -135,7 +135,8 @@ class GameMenuView {
     }
 
     private void displaySearchTheAreaMenu() {
-        System.out.println("\n*** displaySearchTheAreaMenu function called ***");
+        SearchTheAreaView searchTheAreaMenu = new SearchTheAreaView();
+        searchTheAreaMenu.displaySearchTheAreaView();
     }
 
     private void displayHeroAbilityMenu() {

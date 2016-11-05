@@ -76,7 +76,7 @@ public class HideAndSeek {
         Villain villainOne = new Villain();
         
         villainOne.setName("Dave");
-        villainOne.setDescription("Dave is lonely man who enjoys making everyones misserably by placing bombs around the city.");
+        villainOne.setDescription("Dave is lonely man who enjoys making everyones misserable by placing bombs around the city.");
         
         String villainInfo = villainOne.toString();
         System.out.println(villainInfo);
