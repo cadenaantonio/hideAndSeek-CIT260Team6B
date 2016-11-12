@@ -108,7 +108,7 @@ public class GameMenuView extends View{
 
     private void displaySearchTheAreaMenu() {
         SearchTheAreaView searchTheAreaMenu = new SearchTheAreaView();
-        searchTheAreaMenu.displaySearchTheAreaView();
+        searchTheAreaMenu.display();
     }
 
     private void displayHeroAbilityMenu() {
