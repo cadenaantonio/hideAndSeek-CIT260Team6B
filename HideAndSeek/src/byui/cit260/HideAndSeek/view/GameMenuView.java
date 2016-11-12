@@ -114,7 +114,7 @@ public class GameMenuView extends View{
     private void displayHeroAbilityMenu() {
          // call HeroAbilityView class
         HeroAbilityView HeroAbilityMenu = new HeroAbilityView();
-        HeroAbilityMenu.displayHeroAbilityView();
+        HeroAbilityMenu.display();
     }
 
     private void displayInventoryMenu() {

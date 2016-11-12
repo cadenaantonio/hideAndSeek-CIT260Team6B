@@ -11,29 +11,10 @@ import java.util.Scanner;
  *
  * @author Katherine
  */
-class HeroAbilityView {
+public class HeroAbilityView extends View {
 
-    void displayHeroAbilityView() {
-         boolean done = false; // set flag to not done
-        do{
-            //prommp for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-        }while (!done);
-    }
-
-    private String getMenuOption() {
-         Scanner keyboard = new Scanner(System.in);
-        boolean valid = false;
-        String selection = null;
-
-        while (!valid) {
-            
-            System.out.println("\n"
+    public HeroAbilityView() {
+            super("\n"
                  + "\n-----------------------------------------------"
                  + "\n|             Hero Ability Menu                "
                  + "\n-----------------------------------------------"
@@ -44,26 +25,13 @@ class HeroAbilityView {
                  + "\nM - Map"
                  + "\nQ - Quit"
                  + "\n-----------------------------------------------");
-            
-            
-            
-            selection = keyboard.nextLine();
-            selection = selection.trim();
+    }            
 
-                if (selection.length() < 1){
-                    System.out.println("\n***Invalid selection *** Try Again");
-                }
 
-                break;
-        }
-
-        return selection;
-    }
-
-    private boolean doAction(String choice) {
-    choice = choice.toUpperCase(); // convert choice to upper case
+    public boolean doAction(String value) {
+    value = value.toUpperCase(); // convert choice to upper case
         
-        switch (choice) {
+        switch (value) {
             case "P": // Use Sonar
                 this.useSonar();
                 break;
@@ -97,15 +65,15 @@ class HeroAbilityView {
     }
 
     private void useMegaMind() {
-    System.out.println("\n*** useMegaMind() funtion called***");
+        System.out.println("\n*** useMegaMind() funtion called***");
     }
 
     private void useFlight() {
-    System.out.println("\n*** useFlight() funtion called***");
+        System.out.println("\n*** useFlight() funtion called***");
     }
 
     private void useMap() {
-    System.out.println("\n*** useMap() funtion called***");
+        System.out.println("\n*** useMap() funtion called***");
     }
     
 }
