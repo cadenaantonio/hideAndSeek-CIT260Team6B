@@ -83,7 +83,7 @@ public class GameMenuView extends View{
 
     private void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        helpMenu.display();
     }
 
     private void saveGame() {
@@ -120,7 +120,7 @@ public class GameMenuView extends View{
     private void displayInventoryMenu() {
         // call InventoryMenuView class
         InventoryMenuView inventoryMenu = new InventoryMenuView();
-        inventoryMenu.displayInventoryMenuView();
+        inventoryMenu.display();
     }
 
     private void viewMap() {

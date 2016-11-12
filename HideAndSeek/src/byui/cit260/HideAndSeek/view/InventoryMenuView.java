@@ -11,30 +11,11 @@ import java.util.Scanner;
  *
  * @author Antonio Cadena
  */
-public class InventoryMenuView {
+public class InventoryMenuView extends View{
     
-    void displayInventoryMenuView(){
         
-        boolean done = false; // set flag to not done
-        do{
-            //prommp for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-        }while (!done);
-    }
-        
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        boolean valid = false;
-        String selection = null;
-
-        while (!valid) {
-            
-            System.out.println("\n"
+    public InventoryMenuView() {
+        super("\n"
                  + "\n-----------------------------------------------"
                  + "\n| Inventory Menu                               "
                  + "\n-----------------------------------------------"
@@ -47,25 +28,13 @@ public class InventoryMenuView {
                  + "\n-----------------------------------------------");
             
             
-            
-            selection = keyboard.nextLine();
-            selection = selection.trim();
-
-                if (selection.length() < 1){
-                    System.out.println("\n***Invalid selection *** Try Again");
-                }
-
-                break;
-        }
-
-        return selection;
     }
-
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String value) {
             
-        choice = choice.toUpperCase(); // convert choice to upper case
+        value = value.toUpperCase(); // convert value to upper case
         
-        switch (choice) {
+        switch (value) {
             case "S": //ability potion
                 this.useAbilityPotion();
                 break;
