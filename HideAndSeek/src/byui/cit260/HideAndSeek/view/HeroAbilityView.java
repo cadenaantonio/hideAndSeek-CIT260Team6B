@@ -74,6 +74,5 @@ public class HeroAbilityView extends View {
 
     private void useMap() {
         System.out.println("\n*** useMap() funtion called***");
-    }
-    
+    } 
 }
