@@ -1,10 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.HideAndSeek.control;
 
+import byui.cit260.HideAndSeek.model.Game;
+import byui.cit260.HideAndSeek.model.Inventory;
+import byui.cit260.HideAndSeek.model.Map;
 import byui.cit260.HideAndSeek.model.Player;
 import hideandseek.HideAndSeek;
 
@@ -29,7 +27,27 @@ public class GameControl {
     }
 
     public static void createNewGame(Player player) {
-        System.out.println("\n*** createNewGame stub function called ***");
+        
+        Game game = new Game();  //create new game
+        HideAndSeek.setCurrentGame(game); // save in HideAndSeek
+        
+        game.setPlayer(player); //save player in game
+        
+        //create inventory list and save in the game
+        Inventory[] inventory = GameControl.createInventory();
+        game.setInventory(inventory);
+        
+        Map map = MapControl.createMap(); // create and initialize new map
+        game.setMap(map); // saves map in game
+        
+        // move actors to starting position in the map
+        MapControl.moveActorToStartingLocation(map);
+    }
+
+    public static Inventory[] createInventory() {
+        System.out.println("*** called createInventory() in GameControl ***");
+        return null;
+        
     }
     
     
