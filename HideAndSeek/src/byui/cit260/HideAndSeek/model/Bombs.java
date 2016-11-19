@@ -17,6 +17,8 @@ public class Bombs implements Serializable{
     //class instance variables
     private String typeOfBomb;
     private String description;
+    
+    private Location[] location;
 
     public Bombs() {
     }
@@ -35,6 +37,14 @@ public class Bombs implements Serializable{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Location[] getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location[] location) {
+        this.location = location;
     }
 
     @Override

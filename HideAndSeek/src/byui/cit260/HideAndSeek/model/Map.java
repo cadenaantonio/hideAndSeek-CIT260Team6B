@@ -15,6 +15,8 @@ public class Map  implements Serializable{
     
     private int rowCount;
     private int columnCount;
+    
+    private Game[] game;
 
     public Map() {
     }
@@ -33,6 +35,14 @@ public class Map  implements Serializable{
 
     public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
+    }
+
+    public Game[] getGame() {
+        return game;
+    }
+
+    public void setGame(Game[] game) {
+        this.game = game;
     }
 
     @Override

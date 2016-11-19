@@ -19,6 +19,8 @@ public class Player implements Serializable{
     private double returningPlayer;
     
     private Actor actor;
+    
+    private Game[] game;
 
     public Player() {
        // this.name = "";
@@ -48,6 +50,14 @@ public class Player implements Serializable{
 
     public void setActor(Actor actor) {
         this.actor = actor;
+    }
+
+    public Game[] getGame() {
+        return game;
+    }
+
+    public void setGame(Game[] game) {
+        this.game = game;
     }
 
     @Override
