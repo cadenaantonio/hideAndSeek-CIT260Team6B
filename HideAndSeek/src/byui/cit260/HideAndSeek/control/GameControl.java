@@ -1,9 +1,12 @@
 package byui.cit260.HideAndSeek.control;
 
 import byui.cit260.HideAndSeek.model.Game;
+import byui.cit260.HideAndSeek.model.Hero;
 import byui.cit260.HideAndSeek.model.Inventory;
+import byui.cit260.HideAndSeek.model.Items;
 import byui.cit260.HideAndSeek.model.Map;
 import byui.cit260.HideAndSeek.model.Player;
+import byui.cit260.HideAndSeek.model.Weapon;
 import hideandseek.HideAndSeek;
 
 /**
@@ -34,8 +37,8 @@ public class GameControl {
         game.setPlayer(player); //save player in game
         
         //create inventory list and save in the game
-        Inventory[] inventory = GameControl.createInventory();
-        game.setInventory(inventory);
+        Inventory[] inventoryList = GameControl.createInventoryList();
+        game.setInventory(inventoryList);
         
         Map map = MapControl.createMap(); // create and initialize new map
         game.setMap(map); // saves map in game
@@ -44,7 +47,7 @@ public class GameControl {
         MapControl.moveActorToStartingLocation(map);
     }
 
-    public static Inventory[] createInventory() {
+    public static Inventory[] createInventoryList() {
         
         // Created array(list) of inventory items
         Inventory[] inventory = new Inventory[9];
@@ -52,47 +55,47 @@ public class GameControl {
         Inventory potion = new Inventory();
         potion.setDescription("Ability Potion");
         potion.setItemCount(5);
-        inventory[Inventory.potion.ordinal()] = potion;
+        inventory[Items.potion.ordinal()] = potion;
         
         Inventory elixer = new Inventory();
         elixer.setDescription("Ability Elixer");
         elixer.setItemCount(2);
-        inventory[Inventory.elixer.ordinal()] = elixer;
+        inventory[Items.elixer.ordinal()] = elixer;
         
         Inventory knife = new Inventory();
         knife.setDescription("Knife");
         knife.setItemCount(1);
-        inventory[Inventory.knife.ordinal()] = knife;
+        inventory[Weapon.knife.ordinal()] = knife;
         
         Inventory gun = new Inventory();
         gun.setDescription("Ice Gun");
         gun.setItemCount(1);
-        inventory[Inventory.gun.ordinal()] = gun;
+        inventory[Weapon.gun.ordinal()] = gun;
         
         Inventory handcuff = new Inventory();
         handcuff.setDescription("Handcuff");
         handcuff.setItemCount(1);
-        inventory[Inventory.handcuff.ordinal()] = handcuff;
+        inventory[Weapon.handcuff.ordinal()] = handcuff;
         
         Inventory sonar = new Inventory();
         sonar.setDescription("Sonar");
         sonar.setItemCount(2);
-        inventory[Inventory.sonar.ordinal()] = sonar;
+        inventory[Hero.sonar.ordinal()] = sonar;
     
         Inventory sense = new Inventory();
         sense.setDescription("Super Sense");
         sense.setItemCount(2);
-        inventory[Inventory.sense.ordinal()] = sense;
+        inventory[Hero.sense.ordinal()] = sense;
     
         Inventory mind = new Inventory();
         mind.setDescription("Mega-Mind");
         mind.setItemCount(2);
-        inventory[Inventory.mind.ordinal()] = mind;
+        inventory[Hero.mind.ordinal()] = mind;
     
         Inventory flight = new Inventory();
         flight.setDescription("Flight");
         flight.setItemCount(2);
-        inventory[Inventory.flight.ordinal()] = flight;
+        inventory[Hero.flight.ordinal()] = flight;
         
     }
     

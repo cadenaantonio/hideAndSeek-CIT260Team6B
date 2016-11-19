@@ -12,12 +12,17 @@ import java.util.Objects;
  *
  * @author Antonio Cadena
  */
-public class Hero implements Serializable{
+public enum Hero implements Serializable{
+    
+    sonar,
+    sense,
+    mind,
+    flight;
     
     //class instance variables
     private String used;
 
-    public Hero() {
+    Hero() {
     }
 
     public String getUsed() {
@@ -28,30 +33,7 @@ public class Hero implements Serializable{
         this.used = used;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 41 * hash + Objects.hashCode(this.used);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Hero other = (Hero) obj;
-        if (!Objects.equals(this.used, other.used)) {
-            return false;
-        }
-        return true;
-    }
+    
 
     @Override
     public String toString() {
