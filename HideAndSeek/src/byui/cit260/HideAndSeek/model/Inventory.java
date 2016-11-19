@@ -13,6 +13,8 @@ public class Inventory implements Serializable{
     private String description;
     private int itemCount;
     private String name;
+    
+    private Game game;
 
     public Inventory() {
     }
@@ -47,6 +49,14 @@ public class Inventory implements Serializable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
     }
 
     @Override

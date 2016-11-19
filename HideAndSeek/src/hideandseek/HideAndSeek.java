@@ -129,11 +129,11 @@ public class HideAndSeek {
     
     public static void joelTest() {
         //insert individual test code here!
-        Actor actorOne = new Actor();
+        /*Actor actorOne = new Actor();
         
         actorOne.setName("Joel");
         actorOne.setDescription("Superhero of this city.");
-        actorOne.setAbility("Power-suit");
+        actorOne.setCoordinates("1,1");
         
         String actorInfo = actorOne.toString();
         System.out.println(actorInfo);
@@ -152,7 +152,7 @@ public class HideAndSeek {
         locationOne.setDescription("You're at your hideout.");
         
         String locationInfo = locationOne.toString();
-        System.out.println(locationOne);
+        System.out.println(locationOne);*/
     }
     
     /**

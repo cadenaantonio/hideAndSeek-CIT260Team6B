@@ -77,7 +77,7 @@ public class Story3View {
     }
     }
    //Do calculation
-    private void doAction() {
+    /*private void doAction() {
         radius = getRadius();
         height = getHeight();
 
@@ -101,3 +101,4 @@ public class Story3View {
    //Exit the game.
     
 }
+*/

@@ -19,6 +19,9 @@ public class Location  implements Serializable{
     
     private String visited;
     private String description;
+    
+    private Bombs bombs;
+    private Villain villain;
 
     public String getVisited() {
         return visited;
@@ -34,6 +37,22 @@ public class Location  implements Serializable{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Bombs getBombs() {
+        return bombs;
+    }
+
+    public void setBombs(Bombs bombs) {
+        this.bombs = bombs;
+    }
+
+    public Villain getVillain() {
+        return villain;
+    }
+
+    public void setVillain(Villain villain) {
+        this.villain = villain;
     }
 
     @Override

@@ -20,6 +20,9 @@ public class Game implements Serializable{
     // class instance variables
     private String Instruction;
     private String Menu;
+    
+    private Player player;
+    private Map map;
 
     public String getInstruction() {
         return Instruction;
@@ -35,6 +38,22 @@ public class Game implements Serializable{
 
     public void setMenu(String Menu) {
         this.Menu = Menu;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
     }
 
     @Override

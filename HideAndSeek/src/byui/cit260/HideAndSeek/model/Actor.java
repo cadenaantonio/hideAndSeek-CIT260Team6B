@@ -1,5 +1,6 @@
 package byui.cit260.HideAndSeek.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -7,77 +8,49 @@ import java.util.Objects;
  *
  * @author DragonMaster
  */
-public class Actor  implements Serializable {
+public enum Actor implements Serializable {
     
-    private String name;
-    private String description;
-    private String ability;
+    Batman("Hero of Gotham City. Teaches you Mega-Mind ability."),
+    Superman("Hero of Metropolis. Teaches you the Flight ablility."),
+    Spiderman("Hero of New York City. Teaches you the Super Sense ability."),
+    Siryn("Hero with super sonic voice. Teaches you the Sonar ability.");
+    
+    
+    private final String description;
+    private final Point coordinates;
+    
+    private Player player;
+    private Location location;
 
-    public Actor() {
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    Actor(String description) {
+        this.description = description;
+        coordinates = new Point(1,1);
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public Point getCoordinates() {
+        return coordinates;
+}
+
+    public Player getPlayer() {
+        return player;
     }
 
-    public String getAbility() {
-        return ability;
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 
-    public void setAbility(String ability) {
-        this.ability = ability;
+    public Location getLocation() {
+        return location;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 83 * hash + Objects.hashCode(this.name);
-        hash = 83 * hash + Objects.hashCode(this.description);
-        hash = 83 * hash + Objects.hashCode(this.ability);
-        return hash;
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Actor other = (Actor) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (!Objects.equals(this.ability, other.ability)) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "Character{" + "name=" + name + ", description=" + description + ", ability=" + ability + '}';
-    }
-    
     
     
 }

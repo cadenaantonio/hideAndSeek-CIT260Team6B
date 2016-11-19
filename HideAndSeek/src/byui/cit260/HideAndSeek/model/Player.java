@@ -17,6 +17,8 @@ public class Player implements Serializable{
         // class instance variables
     private String name;
     private double returningPlayer;
+    
+    private Actor actor;
 
     public Player() {
        // this.name = "";
@@ -38,6 +40,14 @@ public class Player implements Serializable{
 
     public void setReturningPlayer(double returningPlayer) {
         this.returningPlayer = returningPlayer;
+    }
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
     }
 
     @Override
