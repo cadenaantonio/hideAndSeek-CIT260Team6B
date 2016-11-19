@@ -100,6 +100,10 @@ public class Game implements Serializable{
         return "Game{" + "Instruction=" + Instruction + ", Menu=" + Menu + '}';
     }
 
+    public void setInventoryList(Inventory[] inventory) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     
 }

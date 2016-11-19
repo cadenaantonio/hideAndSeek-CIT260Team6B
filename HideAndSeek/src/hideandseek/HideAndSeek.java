@@ -30,7 +30,7 @@ public class HideAndSeek {
     private static Player player = null;
     
     public static void teamTest() {
-        Player playerOne = new Player();
+        /*Player playerOne = new Player();
         
         playerOne.setName("Meg");
     
@@ -45,10 +45,10 @@ public class HideAndSeek {
         inventoryOne.setName("Blah Potion");
         
         String inventoryInfo = inventoryOne.toString();
-        System.out.println(inventoryInfo);
+        System.out.println(inventoryInfo);*/
     }
     
-    public static void antonioTest() {
+    public static void antonioTest() {/*
         //insert individual test code here!
         
         Game gameOne = new Game();
@@ -119,7 +119,7 @@ public class HideAndSeek {
         itemsOne.setAddToInventory("Add to inventory?");
         
         String itemsInfo = itemsOne.toString();
-        System.out.println(itemsInfo);
+        System.out.println(itemsInfo);*/
         
     }
     

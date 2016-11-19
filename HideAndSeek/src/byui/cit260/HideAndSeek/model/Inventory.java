@@ -7,7 +7,17 @@ import java.util.Objects;
  *
  * @author DragonMaster
  */
-public class Inventory implements Serializable{
+public enum Inventory implements Serializable{
+    
+    potion,
+    elixer,
+    knife,
+    gun,
+    handcuff,
+    sonar,
+    sense,
+    mind,
+    flight;
     
     private String aquired;
     private String description;
@@ -16,7 +26,7 @@ public class Inventory implements Serializable{
     
     private Game game;
 
-    public Inventory() {
+    Inventory() {
     }
 
     public String getAquired() {
@@ -57,43 +67,6 @@ public class Inventory implements Serializable{
 
     public void setGame(Game game) {
         this.game = game;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.aquired);
-        hash = 29 * hash + Objects.hashCode(this.description);
-        hash = 29 * hash + this.itemCount;
-        hash = 29 * hash + Objects.hashCode(this.name);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Inventory other = (Inventory) obj;
-        if (this.itemCount != other.itemCount) {
-            return false;
-        }
-        if (!Objects.equals(this.aquired, other.aquired)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        return true;
     }
 
     @Override
