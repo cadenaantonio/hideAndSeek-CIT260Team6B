@@ -12,15 +12,22 @@ import java.util.Objects;
  *
  * @author Antonio Cadena
  */
-public class Bombs implements Serializable{
+public class Bomb implements Serializable{
     
     //class instance variables
     private String typeOfBomb;
     private String description;
     
-    private Location[] location;
+    //private Location[] location;
 
-    public Bombs() {
+    public Bomb() {
+    }
+    
+    public Bomb(String typeOfBomb, String description) {
+        
+        this.typeOfBomb = typeOfBomb;
+        this.description = description;
+        
     }
     
     public String getTypeOfBomb() {
@@ -39,13 +46,13 @@ public class Bombs implements Serializable{
         this.description = description;
     }
 
-    public Location[] getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location[] location) {
-        this.location = location;
-    }
+//    public Location[] getLocation() {
+//        return location;
+//    }
+//
+//    public void setLocation(Location[] location) {
+//        this.location = location;
+//    }
 
     @Override
     public int hashCode() {
@@ -66,7 +73,7 @@ public class Bombs implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Bombs other = (Bombs) obj;
+        final Bomb other = (Bomb) obj;
         if (!Objects.equals(this.typeOfBomb, other.typeOfBomb)) {
             return false;
         }

@@ -1,11 +1,14 @@
 package byui.cit260.HideAndSeek.control;
 
+import byui.cit260.HideAndSeek.enu.SceneType;
 import byui.cit260.HideAndSeek.model.Game;
 import byui.cit260.HideAndSeek.model.Hero;
 import byui.cit260.HideAndSeek.model.Inventory;
 import byui.cit260.HideAndSeek.model.Items;
+import byui.cit260.HideAndSeek.model.Location;
 import byui.cit260.HideAndSeek.model.Map;
 import byui.cit260.HideAndSeek.model.Player;
+import byui.cit260.HideAndSeek.model.Scene;
 import byui.cit260.HideAndSeek.model.Weapon;
 import hideandseek.HideAndSeek;
 
@@ -45,6 +48,7 @@ public class GameControl {
         
         // move actors to starting position in the map
         MapControl.moveActorToStartingLocation(map);
+        MapControl.movePlayerToStartingLocation(map);
     }
 
     public static Inventory[] createInventoryList() {
@@ -52,25 +56,25 @@ public class GameControl {
         // Created array(list) of inventory items
         Inventory[] inventory = new Inventory[9];
         
-        Inventory potion = new Inventory();
-        potion.setDescription("Ability Potion");
-        potion.setItemCount(5);
-        inventory[Items.potion.ordinal()] = potion;
+        Inventory abilityPotion = new Inventory();
+        abilityPotion.setDescription("Ability Potion");
+        abilityPotion.setItemCount(5);
+        inventory[Items.abilityPotion.ordinal()] = abilityPotion;
         
-        Inventory elixer = new Inventory();
-        elixer.setDescription("Ability Elixer");
-        elixer.setItemCount(2);
-        inventory[Items.elixer.ordinal()] = elixer;
+        Inventory abilityElixer = new Inventory();
+        abilityElixer.setDescription("Ability Elixer");
+        abilityElixer.setItemCount(2);
+        inventory[Items.abilityElixer.ordinal()] = abilityElixer;
         
         Inventory knife = new Inventory();
         knife.setDescription("Knife");
         knife.setItemCount(1);
         inventory[Weapon.knife.ordinal()] = knife;
         
-        Inventory gun = new Inventory();
-        gun.setDescription("Ice Gun");
-        gun.setItemCount(1);
-        inventory[Weapon.gun.ordinal()] = gun;
+        Inventory iceGun = new Inventory();
+        iceGun.setDescription("Ice Gun");
+        iceGun.setItemCount(1);
+        inventory[Weapon.iceGun.ordinal()] = iceGun;
         
         Inventory handcuff = new Inventory();
         handcuff.setDescription("Handcuff");
@@ -82,22 +86,64 @@ public class GameControl {
         sonar.setItemCount(2);
         inventory[Hero.sonar.ordinal()] = sonar;
     
-        Inventory sense = new Inventory();
-        sense.setDescription("Super Sense");
-        sense.setItemCount(2);
-        inventory[Hero.sense.ordinal()] = sense;
+        Inventory superSense = new Inventory();
+        superSense.setDescription("Super Sense");
+        superSense.setItemCount(2);
+        inventory[Hero.superSense.ordinal()] = superSense;
     
-        Inventory mind = new Inventory();
-        mind.setDescription("Mega-Mind");
-        mind.setItemCount(2);
-        inventory[Hero.mind.ordinal()] = mind;
+        Inventory megaMind = new Inventory();
+        megaMind.setDescription("Mega-Mind");
+        megaMind.setItemCount(2);
+        inventory[Hero.megaMind.ordinal()] = megaMind;
     
         Inventory flight = new Inventory();
         flight.setDescription("Flight");
         flight.setItemCount(2);
         inventory[Hero.flight.ordinal()] = flight;
         
+        
+        return inventory;
     }
-    
-    
+
+    static void assignScenesToLocations(Map map, Scene[] scenes) {
+        Location[][] locations = map.getLocations();
+
+// row 1
+        locations[0][0].setScene(scenes[SceneType.smithsMarketplace.ordinal()]);
+        locations[0][1].setScene(scenes[SceneType.andersonHome.ordinal()]);
+        locations[0][2].setScene(scenes[SceneType.hospital.ordinal()]);
+        locations[0][3].setScene(scenes[SceneType.megsPark.ordinal()]);
+        locations[0][4].setScene(scenes[SceneType.northStation.ordinal()]);
+
+// row 2
+        locations[1][0].setScene(scenes[SceneType.westernStation.ordinal()]);
+        locations[1][1].setScene(scenes[SceneType.centralPark.ordinal()]);
+        locations[1][2].setScene(scenes[SceneType.printShop.ordinal()]);
+        locations[1][3].setScene(scenes[SceneType.movieTheater.ordinal()]);
+        locations[1][4].setScene(scenes[SceneType.cadenasHome.ordinal()]);
+
+// row 3
+        locations[2][0].setScene(scenes[SceneType.griffinsHome.ordinal()]);
+        locations[2][1].setScene(scenes[SceneType.smithsHome.ordinal()]);
+        locations[2][2].setScene(scenes[SceneType.mayorsOffice.ordinal()]);
+        locations[2][3].setScene(scenes[SceneType.waterworksPark.ordinal()]);
+        locations[2][4].setScene(scenes[SceneType.hydesHome.ordinal()]);
+
+// row 4
+        locations[3][0].setScene(scenes[SceneType.electronicStore.ordinal()]);
+        locations[3][1].setScene(scenes[SceneType.library.ordinal()]);
+        locations[3][2].setScene(scenes[SceneType.centralStation.ordinal()]);
+        locations[3][3].setScene(scenes[SceneType.mayorJohnsonsHome.ordinal()]);
+        locations[3][4].setScene(scenes[SceneType.easternStation.ordinal()]);
+
+// row 5
+        locations[4][0].setScene(scenes[SceneType.southStation.ordinal()]);
+        locations[4][1].setScene(scenes[SceneType.joelsPark.ordinal()]);
+        locations[4][2].setScene(scenes[SceneType.doctorsClinic.ordinal()]);
+        locations[4][3].setScene(scenes[SceneType.trainStation.ordinal()]);
+        locations[4][4].setScene(scenes[SceneType.antoniosPark.ordinal()]);
+    }
 }
+    
+    
+    

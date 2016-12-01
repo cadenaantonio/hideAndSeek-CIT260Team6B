@@ -15,7 +15,7 @@ import java.util.Objects;
 public enum Weapon implements Serializable{
     
     knife,
-    gun,
+    iceGun,
     handcuff;
     
     //class instance variable

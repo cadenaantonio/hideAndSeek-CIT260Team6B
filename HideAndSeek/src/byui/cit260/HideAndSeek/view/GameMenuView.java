@@ -6,6 +6,10 @@
 package byui.cit260.HideAndSeek.view;
 
 import byui.cit260.HideAndSeek.control.GameControl;
+import byui.cit260.HideAndSeek.control.MapControl;
+import byui.cit260.HideAndSeek.model.Game;
+import byui.cit260.HideAndSeek.model.Location;
+import byui.cit260.HideAndSeek.model.Map;
 import hideandseek.HideAndSeek;
 import java.util.Scanner;
 
@@ -13,11 +17,10 @@ import java.util.Scanner;
  *
  * @author DragonMaster
  */
-public class GameMenuView extends View{
-
+public class GameMenuView extends View {
 
     public GameMenuView() {
-            super("\n"
+        super("\n"
                 + "\n-----------------------------------------------"
                 + "\n| Game Menu                                    "
                 + "\n-----------------------------------------------"
@@ -37,7 +40,7 @@ public class GameMenuView extends View{
 
     @Override
     public boolean doAction(String value) {
-    
+
         value = value.toUpperCase(); // convert value to upper case
 
         switch (value) {
@@ -71,7 +74,7 @@ public class GameMenuView extends View{
             case "S": // save the current game
                 this.saveGame();
                 break;
-            
+
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
@@ -103,7 +106,16 @@ public class GameMenuView extends View{
     }
 
     private void moveRight() {
-        System.out.println("\n*** moveRight function called ***");
+        Game game = HideAndSeek.getCurrentGame(); // retreive the game
+        Map map = game.getMap(); // retreive the map from game
+        //Location[][] locations = map.getLocations(); // retreive the locations from map
+        
+        if (map.getCurrentColumn() < map.getColumnCount()-1){
+            MapControl.movePlayer(map, map.getCurrentRow(), map.getCurrentColumn() + 1);
+        }
+        else {
+            System.out.println("\nCannot move any further to the right.");
+        }
     }
 
     private void displaySearchTheAreaMenu() {
@@ -112,7 +124,7 @@ public class GameMenuView extends View{
     }
 
     private void displayHeroAbilityMenu() {
-         // call HeroAbilityView class
+        // call HeroAbilityView class
         HeroAbilityView HeroAbilityMenu = new HeroAbilityView();
         HeroAbilityMenu.display();
     }
@@ -124,7 +136,41 @@ public class GameMenuView extends View{
     }
 
     private void viewMap() {
-        System.out.println("\n*** viewMap function called ***");
+
+        String leftIndicator;
+        String rightIndicator;
+
+        Game game = HideAndSeek.getCurrentGame(); // retreive the game
+        Map map = game.getMap(); // retreive the map from game
+        Location[][] locations = map.getLocations(); // retreive the locations from map
+
+        System.out.print("  |");
+        for (int column = 0; column < locations[0].length; column++) {
+            System.out.print("  " + column + " |"); // print col numbers to side of map
+        }
+        System.out.println();
+        for (int row = 0; row < locations.length; row++) {
+            System.out.print(row + " "); // print row numbers to side of map
+            for (int column = 0; column < locations[row].length; column++) {
+                leftIndicator = " ";
+                rightIndicator = " ";
+                if (locations[row][column] == map.getCurrentLocation()) {
+                    leftIndicator = "*"; // can be stars or whatever these are indicators showing visited
+                    rightIndicator = "*"; // same as above
+                } else if (locations[row][column].isVisited()) {
+                    leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
+                    rightIndicator = "<"; // same as above
+                }
+                System.out.print("|"); // start map with a |
+                if (locations[row][column].getScene() == null) {
+                    System.out.print(leftIndicator + "??" + rightIndicator);
+                } else {
+                    System.out.print(leftIndicator + locations[row][column].getScene().getSymbol() + rightIndicator);
+                }
+            }
+            System.out.println("|");
+        }
     }
-    
 }
+
+

@@ -8,7 +8,7 @@ package hideandseek;
 import byui.cit260.HideAndSeek.model.Inventory;
 import byui.cit260.HideAndSeek.model.Player;
 import byui.cit260.HideAndSeek.model.Actor;
-import byui.cit260.HideAndSeek.model.Bombs;
+import byui.cit260.HideAndSeek.model.Bomb;
 import byui.cit260.HideAndSeek.model.Game;
 import byui.cit260.HideAndSeek.model.Hero;
 import byui.cit260.HideAndSeek.model.Items;
@@ -62,7 +62,7 @@ public class HideAndSeek {
         
         
         
-        Bombs bombsOne = new Bombs();
+        Bomb bombsOne = new Bomb();
         
         bombsOne.setTypeOfBomb("Make it rain!");
         bombsOne.setDescription("Make it rain: This bomb makes it rain fire, of biblical proportions, from the heavens making even the strongest villan weak in the knees.");

@@ -7,17 +7,8 @@ import java.util.Objects;
  *
  * @author DragonMaster
  */
-public enum Inventory implements Serializable{
+public class Inventory implements Serializable{
     
-    potion,
-    elixer,
-    knife,
-    gun,
-    handcuff,
-    sonar,
-    sense,
-    mind,
-    flight;
     
     private String aquired;
     private String description;
@@ -26,7 +17,7 @@ public enum Inventory implements Serializable{
     
     private Game game;
 
-    Inventory() {
+    public Inventory() {
     }
 
     public String getAquired() {

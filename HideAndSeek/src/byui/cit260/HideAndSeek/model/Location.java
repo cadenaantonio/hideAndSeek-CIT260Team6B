@@ -6,6 +6,7 @@
 package byui.cit260.HideAndSeek.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -19,14 +20,16 @@ public class Location  implements Serializable{
     
     private int row;
     private int column;
-    private String visited;
-    private String description;
-    
-    
-    private Bombs bombs;
-    private Villain villain;
-    
-    private Actor[] actor;
+    private boolean visited;
+    private Scene scene;
+//    private String description;
+//    
+//    private ArrayList<Actor> actors;
+//    
+//    private Bomb bombs;
+//    private Villain villain;
+//    
+//    private Actor[] actor;
 
     public int getRow() {
         return row;
@@ -44,45 +47,23 @@ public class Location  implements Serializable{
         this.column = column;
     }
 
-    public String getVisited() {
+    public boolean isVisited() {
         return visited;
     }
 
-    public void setVisited(String visited) {
+    public void setVisited(boolean visited) {
         this.visited = visited;
     }
 
-    public String getDescription() {
-        return description;
+    public Scene getScene() {
+        return scene;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setScene(Scene scene) {
+        this.scene = scene;
     }
 
-    public Bombs getBombs() {
-        return bombs;
-    }
-
-    public void setBombs(Bombs bombs) {
-        this.bombs = bombs;
-    }
-
-    public Villain getVillain() {
-        return villain;
-    }
-
-    public void setVillain(Villain villain) {
-        this.villain = villain;
-    }
-
-    public Actor[] getActor() {
-        return actor;
-    }
-
-    public void setActor(Actor[] actor) {
-        this.actor = actor;
-    }
+   
 
     @Override
     public int hashCode() {
@@ -90,7 +71,7 @@ public class Location  implements Serializable{
         hash = 19 * hash + this.row;
         hash = 19 * hash + this.column;
         hash = 19 * hash + Objects.hashCode(this.visited);
-        hash = 19 * hash + Objects.hashCode(this.description);
+        
         return hash;
     }
 
@@ -115,15 +96,13 @@ public class Location  implements Serializable{
         if (!Objects.equals(this.visited, other.visited)) {
             return false;
         }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
+        
         return true;
     }
 
     @Override
     public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", description=" + description + '}';
+        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
     }
 
     

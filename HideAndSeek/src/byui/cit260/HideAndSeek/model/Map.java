@@ -6,6 +6,8 @@
 package byui.cit260.HideAndSeek.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Objects;
 
 /**
  *
@@ -13,16 +15,72 @@ import java.io.Serializable;
  */
 public class Map  implements Serializable{
     
+    private Location currentLocation;
+    private int currentRow;
+    private int currentColumn;
     private int rowCount;
     private int columnCount;
+    private Location[][] locations;
     
     private Game[] game;
 
     public Map() {
     }
     
+    public Map(int rowCount, int columnCount) {
+        
+        this.rowCount = rowCount;
+        this.columnCount = columnCount;
+        locations = new Location[rowCount][columnCount];
+        
+        for (int row = 0; row < rowCount; row++) {
+		for (int column = 0; column < columnCount; column++) {
+		//create and initialize new Location object instance
+		Location location = new Location();
+		location.setColumn(column);
+		location.setRow(row);
+		location.setVisited(false);
+		
+		//assign the Location object to the current position in array
+		locations[row][column] = location;
+		}
+        
+        }
+    }
     //write code here
 
+    public int getCurrentRow() {
+        return currentRow;
+    }
+
+    public void setCurrentRow(int currentRow) {
+        this.currentRow = currentRow;
+    }
+
+    public int getCurrentColumn() {
+        return currentColumn;
+    }
+
+    public void setCurrentColumn(int currentColumn) {
+        this.currentColumn = currentColumn;
+    }
+
+    public Location getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(Location currentLocation) {
+        this.currentLocation = currentLocation;
+    }
+
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
+    
     public int getRowCount() {
         return rowCount;
     }
@@ -50,8 +108,11 @@ public class Map  implements Serializable{
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 97 * hash + this.rowCount;
-        hash = 97 * hash + this.columnCount;
+        hash = 47 * hash + Objects.hashCode(this.currentLocation);
+        hash = 47 * hash + this.rowCount;
+        hash = 47 * hash + this.columnCount;
+        hash = 47 * hash + Arrays.deepHashCode(this.locations);
+        hash = 47 * hash + Arrays.deepHashCode(this.game);
         return hash;
     }
 
@@ -73,14 +134,21 @@ public class Map  implements Serializable{
         if (this.columnCount != other.columnCount) {
             return false;
         }
+        if (!Objects.equals(this.currentLocation, other.currentLocation)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.locations, other.locations)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.game, other.game)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
+        return "Map{" + "currentLocation=" + currentLocation + ", rowCount=" + rowCount + ", columnCount=" + columnCount + ", locations=" + locations + ", game=" + game + '}';
     }
-    
-    
-    
+
 }

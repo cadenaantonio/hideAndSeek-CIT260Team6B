@@ -15,8 +15,8 @@ import java.util.Objects;
 public enum Hero implements Serializable{
     
     sonar,
-    sense,
-    mind,
+    superSense,
+    megaMind,
     flight;
     
     //class instance variables

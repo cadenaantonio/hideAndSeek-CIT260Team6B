@@ -14,8 +14,8 @@ import java.util.Objects;
  */
 public enum Items implements Serializable{
     
-    potion,
-    elixer;
+    abilityPotion,
+    abilityElixer;
     
     //class instance variable
     private String addToInventory;
