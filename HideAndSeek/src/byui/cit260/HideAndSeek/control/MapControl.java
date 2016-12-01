@@ -67,28 +67,116 @@ public class MapControl {
         currentScene.setBomb(new Bomb("", ""));
         scenes[SceneType.hospital.ordinal()] = currentScene;
 
-//        megsPark,
-//        northStation,
-//        westernStation,
-//        centralPark,
-//        printShop,
-//        movieTheater,
+        currentScene = new Scene("Meg\'s Park", "MP", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.megsPark.ordinal()] = currentScene;
+
+        currentScene = new Scene("North Station", "NS", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.northStation.ordinal()] = currentScene;
+
+        currentScene = new Scene("Western Station", "WS", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.westernStation.ordinal()] = currentScene;
+
+        currentScene = new Scene("Central Park", "CP", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.centralPark.ordinal()] = currentScene;
+
+        currentScene = new Scene("Print Shop", "PS", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.printShop.ordinal()] = currentScene;
+
+        currentScene = new Scene("Movie Theater", "MT", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.movieTheater.ordinal()] = currentScene;
 //        cadenasHome,
-//        griffinsHome,
-//        smithsHome,
-//        mayorsOffice,
-//        waterworksPark,
-//        hydesHome,
-//        electronicStore,
-//        library,
-//        centralStation,
-//        mayorJohnsonsHome,
-//        easternStation,
-//        southStation,
-//        joelsPark,
-//        doctorsClinic,
-//        trainStation,
-//        antoniosPark;  
+        currentScene = new Scene("Cadena\'s Home", "CH", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.cadenasHome.ordinal()] = currentScene;
+
+        currentScene = new Scene("Griffin\'s Home", "GH", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.griffinsHome.ordinal()] = currentScene;
+
+        currentScene = new Scene("Smith\'s Home", "SH", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.smithsHome.ordinal()] = currentScene;
+
+        currentScene = new Scene("Mayor\'s Office", "MO", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.mayorsOffice.ordinal()] = currentScene;
+
+        currentScene = new Scene("Waterwork\'s Park", "WP", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.waterworksPark.ordinal()] = currentScene;
+
+        currentScene = new Scene("Hyde\'s Home", "HH", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.hydesHome.ordinal()] = currentScene;
+
+        currentScene = new Scene("Electronic Store", "EL", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.electronicStore.ordinal()] = currentScene;
+
+        currentScene = new Scene("Library", "LB", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.library.ordinal()] = currentScene;
+
+        currentScene = new Scene("Central Station", "CS", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.centralStation.ordinal()] = currentScene;
+
+        currentScene = new Scene("Mayor Johnson\'s Home", "JH", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.mayorJohnsonsHome.ordinal()] = currentScene;
+
+        currentScene = new Scene("Eastern Station", "ES", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.easternStation.ordinal()] = currentScene;
+
+        currentScene = new Scene("South Station", "SS", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.southStation.ordinal()] = currentScene;
+
+        currentScene = new Scene("Joel\'s Park", "JP", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.joelsPark.ordinal()] = currentScene;
+
+        currentScene = new Scene("Doctor\'s Clinic", "DC", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.doctorsClinic.ordinal()] = currentScene;
+
+        currentScene = new Scene("Train Station", "TS", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.trainStation.ordinal()] = currentScene;
+  
+        currentScene = new Scene("Antonio\'s Park", "AP", "");
+        currentScene.setActor(new Actor(""));
+        currentScene.setBomb(new Bomb("", ""));
+        scenes[SceneType.antoniosPark.ordinal()] = currentScene;
+
         return scenes;
     }
 
