@@ -12,21 +12,19 @@ import java.util.Objects;
  *
  * @author Antonio Cadena
  */
-public class Player implements Serializable{
-    
-        // class instance variables
+public class Player implements Serializable {
+
+    // class instance variables
     private String name;
     private double returningPlayer;
-    
+
     private Actor actor;
-    
+
     private Game[] game;
 
     public Player() {
-       // this.name = "";
+        // this.name = "";
     }
-    
-    
 
     public String getName() {
         return name;
@@ -72,8 +70,6 @@ public class Player implements Serializable{
     public String toString() {
         return "player{" + "name=" + name + ", returningPlayer=" + returningPlayer + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -95,7 +91,5 @@ public class Player implements Serializable{
         }
         return true;
     }
-    
-    
-    
+
 }

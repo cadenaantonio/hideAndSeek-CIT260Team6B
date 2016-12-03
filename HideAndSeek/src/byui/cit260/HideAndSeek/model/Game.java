@@ -12,18 +12,18 @@ import java.util.Objects;
  *
  * @author Antonio Cadena
  */
-public class Game implements Serializable{
-    
+public class Game implements Serializable {
+
     public Game() {
     }
-    
+
     // class instance variables
     private String Instruction;
     private String Menu;
-    
+
     private Player player;
     private Map map;
-    
+
     private Inventory[] inventory;
 
     public String getInstruction() {
@@ -104,6 +104,4 @@ public class Game implements Serializable{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-    
 }

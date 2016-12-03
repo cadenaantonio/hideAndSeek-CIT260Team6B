@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author Antonio Cadena
  */
-public class Questions implements Serializable{
-    
+public class Questions implements Serializable {
+
     //class instance variables
     private String description;
 
@@ -57,6 +57,5 @@ public class Questions implements Serializable{
     public String toString() {
         return "Questions{" + "description=" + description + '}';
     }
-    
-    
+
 }

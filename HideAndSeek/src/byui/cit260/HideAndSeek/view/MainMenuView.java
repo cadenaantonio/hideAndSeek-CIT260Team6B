@@ -14,9 +14,9 @@ import java.util.Scanner;
  * @author Antonio Cadena
  */
 public class MainMenuView extends View {
-        
-            public MainMenuView(){
-                super("\n"
+
+    public MainMenuView() {
+        super("\n"
                 + "\n-----------------------------------------------"
                 + "\n| Main Menu                                    "
                 + "\n-----------------------------------------------"
@@ -28,9 +28,9 @@ public class MainMenuView extends View {
                 + "\n-----------------------------------------------");
     }
 
-    @Override    
+    @Override
     public boolean doAction(String value) {
-    
+
         value = value.toUpperCase(); // convert choice to upper case
 
         switch (value) {
@@ -56,9 +56,9 @@ public class MainMenuView extends View {
     }
 
     private void startNewGame() {
-            // create a new game
+        // create a new game
         GameControl.createNewGame(HideAndSeek.getPlayer());
-        
+
         // display the game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
@@ -76,5 +76,5 @@ public class MainMenuView extends View {
     private void saveGame() {
         System.out.println("\n*** startSaveGame function called ***");
     }
-    
+
 }

@@ -109,11 +109,10 @@ public class GameMenuView extends View {
         Game game = HideAndSeek.getCurrentGame(); // retreive the game
         Map map = game.getMap(); // retreive the map from game
         //Location[][] locations = map.getLocations(); // retreive the locations from map
-        
-        if (map.getCurrentColumn() < map.getColumnCount()-1){
+
+        if (map.getCurrentColumn() < map.getColumnCount() - 1) {
             MapControl.movePlayer(map, map.getCurrentRow(), map.getCurrentColumn() + 1);
-        }
-        else {
+        } else {
             System.out.println("\nCannot move any further to the right.");
         }
     }
@@ -172,5 +171,3 @@ public class GameMenuView extends View {
         }
     }
 }
-
-

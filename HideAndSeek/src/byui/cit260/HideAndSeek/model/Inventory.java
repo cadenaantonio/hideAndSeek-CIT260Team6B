@@ -7,14 +7,13 @@ import java.util.Objects;
  *
  * @author DragonMaster
  */
-public class Inventory implements Serializable{
-    
-    
+public class Inventory implements Serializable {
+
     private String aquired;
     private String description;
     private int itemCount;
     private String name;
-    
+
     private Game game;
 
     public Inventory() {
@@ -65,5 +64,4 @@ public class Inventory implements Serializable{
         return "Inventory{" + "aquired=" + aquired + ", description=" + description + ", itemCount=" + itemCount + ", name=" + name + '}';
     }
 
-    
 }

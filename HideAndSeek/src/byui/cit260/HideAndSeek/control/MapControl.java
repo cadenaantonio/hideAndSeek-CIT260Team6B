@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.HideAndSeek.control;
 
 import byui.cit260.HideAndSeek.enu.SceneType;
@@ -96,7 +91,7 @@ public class MapControl {
         currentScene.setActor(new Actor(""));
         currentScene.setBomb(new Bomb("", ""));
         scenes[SceneType.movieTheater.ordinal()] = currentScene;
-//        cadenasHome,
+
         currentScene = new Scene("Cadena\'s Home", "CH", "The Cadena\'s House is a historical site known for the creation of the fabled Tin Man");
         currentScene.setActor(new Actor(""));
         currentScene.setBomb(new Bomb("", ""));
@@ -171,7 +166,7 @@ public class MapControl {
         currentScene.setActor(new Actor(""));
         currentScene.setBomb(new Bomb("", ""));
         scenes[SceneType.trainStation.ordinal()] = currentScene;
-  
+
         currentScene = new Scene("Antonio\'s Park", "AP", "Antonio\'s Park is a great place for picnics and many have been known to nap in the poppy fields there");
         currentScene.setActor(new Actor(""));
         currentScene.setBomb(new Bomb("", ""));

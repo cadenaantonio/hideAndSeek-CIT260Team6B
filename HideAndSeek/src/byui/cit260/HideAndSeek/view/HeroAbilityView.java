@@ -14,23 +14,22 @@ import java.util.Scanner;
 public class HeroAbilityView extends View {
 
     public HeroAbilityView() {
-            super("\n"
-                 + "\n-----------------------------------------------"
-                 + "\n|             Hero Ability Menu                "
-                 + "\n-----------------------------------------------"
-                 + "\nP - Sonar: gives general direction of where villian is."
-                 + "\nS - Super-Sense:Able to sense if a bomb is nearby."
-                 + "\nW - Mega-Mind:Narrow answer down on math questions"
-                 + "\nF - Flight:Fly to location on map."
-                 + "\nM - Map"
-                 + "\nQ - Quit"
-                 + "\n-----------------------------------------------");
-    }            
-
+        super("\n"
+                + "\n-----------------------------------------------"
+                + "\n|             Hero Ability Menu                "
+                + "\n-----------------------------------------------"
+                + "\nP - Sonar: gives general direction of where villian is."
+                + "\nS - Super-Sense:Able to sense if a bomb is nearby."
+                + "\nW - Mega-Mind:Narrow answer down on math questions"
+                + "\nF - Flight:Fly to location on map."
+                + "\nM - Map"
+                + "\nQ - Quit"
+                + "\n-----------------------------------------------");
+    }
 
     public boolean doAction(String value) {
-    value = value.toUpperCase(); // convert choice to upper case
-        
+        value = value.toUpperCase(); // convert choice to upper case
+
         switch (value) {
             case "P": // Use Sonar
                 this.useSonar();
@@ -47,12 +46,12 @@ public class HeroAbilityView extends View {
             case "M": // use map
                 this.useMap();
                 break;
-            
+
             default:
                 System.out.println("\n*** Invalid selection *** Try Again");
                 break;
         }
-        
+
         return false;
     }
 
@@ -74,5 +73,5 @@ public class HeroAbilityView extends View {
 
     private void useMap() {
         System.out.println("\n*** useMap() funtion called***");
-    } 
+    }
 }

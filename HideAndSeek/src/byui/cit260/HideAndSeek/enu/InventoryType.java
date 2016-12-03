@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author DragonMaster
  */
 public enum InventoryType implements Serializable {
-    
+
     abilityPotion,
     abilityElixer,
     knife,
@@ -17,5 +17,5 @@ public enum InventoryType implements Serializable {
     superSense,
     megaMind,
     flight;
-    
+
 }

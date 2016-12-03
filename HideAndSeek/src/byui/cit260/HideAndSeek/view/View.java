@@ -12,30 +12,31 @@ import java.util.Scanner;
  * @author DragonMaster
  */
 public abstract class View implements ViewInterface {
-    
+
     protected String displayMessage;
-    
+
     public View() {
     }
-    
+
     public View(String message) {
         this.displayMessage = message;
     }
-    
+
     @Override
     public void display() {
         boolean done = false; // set flag to not done
-        do{
+        do {
             //prommp for and get players name
             String value = this.getInput();
             if (value.toUpperCase().equals("Q")) // user wants to quit
+            {
                 return; // exit the game
-            
+            }
             //do the requested action and display the next view
             done = this.doAction(value);
-        }while (!done);
+        } while (!done);
     }
-    
+
     @Override
     public String getInput() {
         Scanner keyboard = new Scanner(System.in);
@@ -43,19 +44,19 @@ public abstract class View implements ViewInterface {
         String value = null;
 
         while (!valid) {
-            
-            System.out.println("\n" +  this.displayMessage);
-           
+
+            System.out.println("\n" + this.displayMessage);
+
             //
             value = keyboard.nextLine();
             value = value.trim();
 
-                if (value.length() < 1){
-                    System.out.println("\n*** You must enter a value ***");
-                    continue;
-                }
+            if (value.length() < 1) {
+                System.out.println("\n*** You must enter a value ***");
+                continue;
+            }
 
-                break;
+            break;
         }
 
         return value;

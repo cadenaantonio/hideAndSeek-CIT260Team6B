@@ -12,11 +12,11 @@ import java.util.Objects;
  *
  * @author Antonio Cadena
  */
-public enum Items implements Serializable{
-    
+public enum Items implements Serializable {
+
     abilityPotion,
     abilityElixer;
-    
+
     //class instance variable
     private String addToInventory;
 
@@ -31,8 +31,4 @@ public enum Items implements Serializable{
         this.addToInventory = addToInventory;
     }
 
-    
-    
-    
-    
 }

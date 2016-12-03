@@ -10,11 +10,13 @@ package byui.cit260.HideAndSeek.control;
  * @author DragonMaster
  */
 public class HeroControl {
-    /**public int useAbility(int itemCount){
-        
-    }
-    
-    public int addAbility(int itemCount){
-        
-    }**/
+    /**
+     * public int useAbility(int itemCount){
+     *
+     * }
+     *
+     * public int addAbility(int itemCount){
+     *
+     * }*
+     */
 }

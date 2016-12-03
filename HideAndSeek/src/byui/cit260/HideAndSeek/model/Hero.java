@@ -12,13 +12,13 @@ import java.util.Objects;
  *
  * @author Antonio Cadena
  */
-public enum Hero implements Serializable{
-    
+public enum Hero implements Serializable {
+
     sonar,
     superSense,
     megaMind,
     flight;
-    
+
     //class instance variables
     private String used;
 
@@ -33,13 +33,9 @@ public enum Hero implements Serializable{
         this.used = used;
     }
 
-    
-
     @Override
     public String toString() {
         return "Hero{" + "used=" + used + '}';
     }
-    
-    
-    
+
 }

@@ -12,12 +12,12 @@ import java.util.Objects;
  *
  * @author Antonio Cadena
  */
-public enum Weapon implements Serializable{
-    
+public enum Weapon implements Serializable {
+
     knife,
     iceGun,
     handcuff;
-    
+
     //class instance variable
     private String typeOfWeapon;
 
@@ -32,13 +32,9 @@ public enum Weapon implements Serializable{
         this.typeOfWeapon = typeOfWeapon;
     }
 
-    
-
     @Override
     public String toString() {
         return "Weapon{" + "typeOfWeapon=" + typeOfWeapon + '}';
     }
 
-    
-    
 }

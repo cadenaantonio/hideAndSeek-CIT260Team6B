@@ -9,38 +9,37 @@ import java.util.Objects;
  * @author DragonMaster
  */
 public class Scene implements Serializable {
-    
+
     private String name;
     private String description;
     private String symbol;
-    
+
     private Bomb bomb;
-    
+
     private Actor actor;
-    
-    public Scene(){
-        
+
+    public Scene() {
+
         this.name = "";
         this.symbol = "";
         this.description = "";
-        
+
         actor = null;
         bomb = null;
-        
+
     }
-    
+
     public Scene(String name, String symbol, String description) {
-        
+
         this.name = name;
         this.symbol = symbol;
         this.description = description;
-        
+
         actor = null;
         bomb = null;
-        
+
     }
-    
-    
+
     public String getName() {
         return name;
     }
@@ -126,8 +125,5 @@ public class Scene implements Serializable {
     public String toString() {
         return "Scene{" + "name=" + name + ", description=" + description + ", symbol=" + symbol + '}';
     }
-    
-    
-    
-    
+
 }

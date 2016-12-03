@@ -14,24 +14,24 @@ import java.util.Scanner;
 public class SearchTheAreaView extends View {
 
     public SearchTheAreaView() {
-            super("\n"
-                 + "\n-----------------------------------------------"
-                 + "\n| Search the Area Menu                               "
-                 + "\n-----------------------------------------------"
-                 + "\nD - Disarm Bomb"
-                 + "\nC - Capture Villian"
-                 + "\nA - Add Hero"
-                 + "\nQ - Quit"
-                 + "\n-----------------------------------------------");
-            
+        super("\n"
+                + "\n-----------------------------------------------"
+                + "\n| Search the Area Menu                               "
+                + "\n-----------------------------------------------"
+                + "\nD - Disarm Bomb"
+                + "\nC - Capture Villian"
+                + "\nA - Add Hero"
+                + "\nQ - Quit"
+                + "\n-----------------------------------------------");
+
     }
 
-@Override
-    public boolean doAction(String value) {   
+    @Override
+    public boolean doAction(String value) {
         value = value.toUpperCase(); // convert value to upper case
-        
+
         switch (value) {
-            
+
             case "D": // disarm bomb
                 this.disarmBomb();
                 break;
@@ -45,9 +45,9 @@ public class SearchTheAreaView extends View {
                 System.out.println("\n*** Invalid selection *** Try Again");
                 break;
         }
-        
+
         return false;
-      
+
     }
 
     private void disarmBomb() {
@@ -55,11 +55,11 @@ public class SearchTheAreaView extends View {
     }
 
     private void captureVillian() {
-        System.out.println("\n*** captureVillian function called ***");    
+        System.out.println("\n*** captureVillian function called ***");
     }
 
     private void addHero() {
-        System.out.println("\n*** addHero function called ***");    
+        System.out.println("\n*** addHero function called ***");
     }
-    
+
 }

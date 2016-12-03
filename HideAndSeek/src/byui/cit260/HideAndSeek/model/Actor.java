@@ -9,16 +9,12 @@ import java.util.Objects;
  * @author DragonMaster
  */
 public class Actor implements Serializable {
-    
-    
-    
-    
+
     private final String description;
     //private final Point coordinates;
-    
+
     //private Player player;
     //private Location location;
-
     public Actor(String description) {
         this.description = description;
         //coordinates = new Point(1,1);
@@ -47,7 +43,4 @@ public class Actor implements Serializable {
 //    public void setLocation(Location location) {
 //        this.location = location;
 //    }
-
-    
-    
 }

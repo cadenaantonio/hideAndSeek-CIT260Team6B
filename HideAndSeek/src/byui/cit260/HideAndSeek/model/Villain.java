@@ -12,17 +12,17 @@ import java.util.Objects;
  *
  * @author Antonio Cadena
  */
-public class Villain implements Serializable{
-    
+public class Villain implements Serializable {
+
     //class instance variables
     private String name;
     private String description;
-    
+
     private Location[] location;
 
     public Villain() {
     }
-    
+
     public String getName() {
         return name;
     }
@@ -80,7 +80,5 @@ public class Villain implements Serializable{
     public String toString() {
         return "Villain{" + "name=" + name + ", description=" + description + '}';
     }
-    
-    
-    
+
 }

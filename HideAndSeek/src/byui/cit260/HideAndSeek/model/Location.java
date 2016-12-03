@@ -13,11 +13,11 @@ import java.util.Objects;
  *
  * @author DragonMaster
  */
-public class Location  implements Serializable{
+public class Location implements Serializable {
 
     public Location() {
     }
-    
+
     private int row;
     private int column;
     private boolean visited;
@@ -63,15 +63,13 @@ public class Location  implements Serializable{
         this.scene = scene;
     }
 
-   
-
     @Override
     public int hashCode() {
         int hash = 3;
         hash = 19 * hash + this.row;
         hash = 19 * hash + this.column;
         hash = 19 * hash + Objects.hashCode(this.visited);
-        
+
         return hash;
     }
 
@@ -96,7 +94,7 @@ public class Location  implements Serializable{
         if (!Objects.equals(this.visited, other.visited)) {
             return false;
         }
-        
+
         return true;
     }
 
@@ -105,8 +103,4 @@ public class Location  implements Serializable{
         return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
     }
 
-    
-    
-    
-    
 }

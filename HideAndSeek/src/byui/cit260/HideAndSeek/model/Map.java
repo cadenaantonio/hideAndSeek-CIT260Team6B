@@ -13,38 +13,38 @@ import java.util.Objects;
  *
  * @author DragonMaster
  */
-public class Map  implements Serializable{
-    
+public class Map implements Serializable {
+
     private Location currentLocation;
     private int currentRow;
     private int currentColumn;
     private int rowCount;
     private int columnCount;
     private Location[][] locations;
-    
+
     private Game[] game;
 
     public Map() {
     }
-    
+
     public Map(int rowCount, int columnCount) {
-        
+
         this.rowCount = rowCount;
         this.columnCount = columnCount;
         locations = new Location[rowCount][columnCount];
-        
+
         for (int row = 0; row < rowCount; row++) {
-		for (int column = 0; column < columnCount; column++) {
-		//create and initialize new Location object instance
-		Location location = new Location();
-		location.setColumn(column);
-		location.setRow(row);
-		location.setVisited(false);
-		
-		//assign the Location object to the current position in array
-		locations[row][column] = location;
-		}
-        
+            for (int column = 0; column < columnCount; column++) {
+                //create and initialize new Location object instance
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setVisited(false);
+
+                //assign the Location object to the current position in array
+                locations[row][column] = location;
+            }
+
         }
     }
     //write code here
@@ -80,7 +80,7 @@ public class Map  implements Serializable{
     public void setLocations(Location[][] locations) {
         this.locations = locations;
     }
-    
+
     public int getRowCount() {
         return rowCount;
     }
