@@ -11,7 +11,7 @@ import java.util.Objects;
 public class Scene implements Serializable {
 
     private String name;
-    private String description;
+    public String description;
     private String symbol;
 
     private Bomb bomb;

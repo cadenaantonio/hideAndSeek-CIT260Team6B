@@ -63,7 +63,7 @@ public class MapControl {
         scenes[SceneType.hospital.ordinal()] = currentScene;
 
         currentScene = new Scene("Meg\'s Park", "MP", "A lush park known for hosting the winter festivle");
-        currentScene.setActor(new Actor(""));
+        currentScene.setActor(new Actor("Batman"));
         currentScene.setBomb(new Bomb("", ""));
         scenes[SceneType.megsPark.ordinal()] = currentScene;
 
@@ -108,7 +108,7 @@ public class MapControl {
         scenes[SceneType.smithsHome.ordinal()] = currentScene;
 
         currentScene = new Scene("Mayor\'s Office", "MO", "Local Mayor's Office, he has been known to be a little Green");
-        currentScene.setActor(new Actor(""));
+        currentScene.setActor(new Actor("Spiderman"));
         currentScene.setBomb(new Bomb("", ""));
         scenes[SceneType.mayorsOffice.ordinal()] = currentScene;
 
@@ -128,7 +128,7 @@ public class MapControl {
         scenes[SceneType.electronicStore.ordinal()] = currentScene;
 
         currentScene = new Scene("Library", "LB", "The library, stop by for a book or to sample their public services.");
-        currentScene.setActor(new Actor(""));
+        currentScene.setActor(new Actor("Syrin"));
         currentScene.setBomb(new Bomb("", ""));
         scenes[SceneType.library.ordinal()] = currentScene;
 
@@ -138,7 +138,7 @@ public class MapControl {
         scenes[SceneType.centralStation.ordinal()] = currentScene;
 
         currentScene = new Scene("Mayor Johnson\'s Home", "JH", "The mayor\'s illustrious home, some say he used to have the title wizard");
-        currentScene.setActor(new Actor(""));
+        currentScene.setActor(new Actor("Maul"));
         currentScene.setBomb(new Bomb("", ""));
         scenes[SceneType.mayorJohnsonsHome.ordinal()] = currentScene;
 
@@ -158,7 +158,7 @@ public class MapControl {
         scenes[SceneType.joelsPark.ordinal()] = currentScene;
 
         currentScene = new Scene("Doctor\'s Clinic", "DC", "For your non-emergency medical needs stop in today to see Dr. Frank N Stein.");
-        currentScene.setActor(new Actor(""));
+        currentScene.setActor(new Actor("Superman"));
         currentScene.setBomb(new Bomb("", ""));
         scenes[SceneType.doctorsClinic.ordinal()] = currentScene;
 
