@@ -42,7 +42,7 @@ public class SearchTheAreaView extends View {
                 this.addHero();
                 break;
             default:
-                System.out.println("\n*** Invalid selection *** Try Again");
+                this.console.println("\n*** Invalid selection *** Try Again");
                 break;
         }
 
@@ -51,15 +51,15 @@ public class SearchTheAreaView extends View {
     }
 
     private void disarmBomb() {
-        System.out.println("\n*** disarmBomb function called ***");
+        this.console.println("\n*** disarmBomb function called ***");
     }
 
     private void captureVillian() {
-        System.out.println("\n*** captureVillian function called ***");
+        this.console.println("\n*** captureVillian function called ***");
     }
 
     private void addHero() {
-        System.out.println("\n*** addHero function called ***");
+        this.console.println("\n*** addHero function called ***");
     }
 
 }

@@ -52,7 +52,7 @@ public class InventoryMenuView extends View{
                 break;
             
             default:
-                System.out.println("\n*** Invalid selection *** Try Again");
+                this.console.println("\n*** Invalid selection *** Try Again");
                 break;
         }
         
@@ -61,23 +61,23 @@ public class InventoryMenuView extends View{
     }
 
     private void useAbilityPotion() {
-        System.out.println("\n*** useAbilityPotion() funtion called***");
+        this.console.println("\n*** useAbilityPotion() funtion called***");
     }
 
     private void useAbilityElixer() {
-        System.out.println("\n*** useAbilityElixer() funtion called***");
+        this.console.println("\n*** useAbilityElixer() funtion called***");
     }
 
     private void useKnife() {
-        System.out.println("\n*** useKnife() funtion called***");
+        this.console.println("\n*** useKnife() funtion called***");
     }
 
     private void useIceGun() {
-        System.out.println("\n*** useIceGun() funtion called***");
+        this.console.println("\n*** useIceGun() funtion called***");
     }
 
     private void useHandcuffs() {
-        System.out.println("\n*** useHandcuffs() funtion called***");
+        this.console.println("\n*** useHandcuffs() funtion called***");
     }
     
 }

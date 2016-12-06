@@ -5,6 +5,9 @@
  */
 package byui.cit260.HideAndSeek.view;
 
+import hideandseek.HideAndSeek;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
@@ -14,6 +17,9 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
 
     protected String displayMessage;
+
+    protected final BufferedReader keyboard = HideAndSeek.getInFile();
+    protected final PrintWriter console = HideAndSeek.getOutFile();
 
     public View() {
     }
@@ -39,24 +45,28 @@ public abstract class View implements ViewInterface {
 
     @Override
     public String getInput() {
-        Scanner keyboard = new Scanner(System.in);
+
         boolean valid = false;
         String value = null;
+        try {
+            while (!valid) {
 
-        while (!valid) {
+                this.console.println("\n" + this.displayMessage);
 
-            System.out.println("\n" + this.displayMessage);
+                //
+                value = this.keyboard.readLine();
+                value = value.trim();
 
-            //
-            value = keyboard.nextLine();
-            value = value.trim();
+                if (value.length() < 1) {
+                    this.console.println("\n*** You must enter a value ***");
+                    continue;
+                }
 
-            if (value.length() < 1) {
-                System.out.println("\n*** You must enter a value ***");
-                continue;
+                break;
             }
 
-            break;
+        } catch (Exception e) {
+            this.console.println("Error readin input: " + e.getMessage());
         }
 
         return value;

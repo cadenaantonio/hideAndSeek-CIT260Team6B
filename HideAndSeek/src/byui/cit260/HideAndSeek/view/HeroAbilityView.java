@@ -48,7 +48,7 @@ public class HeroAbilityView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid selection *** Try Again");
+                this.console.println("\n*** Invalid selection *** Try Again");
                 break;
         }
 
@@ -56,22 +56,22 @@ public class HeroAbilityView extends View {
     }
 
     private void useSonar() {
-        System.out.println("\n*** useSonar() funtion called***");
+        this.console.println("\n*** useSonar() funtion called***");
     }
 
     private void useSuperSense() {
-        System.out.println("\n*** useSuperSense() funtion called***");
+        this.console.println("\n*** useSuperSense() funtion called***");
     }
 
     private void useMegaMind() {
-        System.out.println("\n*** useMegaMind() funtion called***");
+        this.console.println("\n*** useMegaMind() funtion called***");
     }
 
     private void useFlight() {
-        System.out.println("\n*** useFlight() funtion called***");
+        this.console.println("\n*** useFlight() funtion called***");
     }
 
     private void useMap() {
-        System.out.println("\n*** useMap() funtion called***");
+        this.console.println("\n*** useMap() funtion called***");
     }
 }

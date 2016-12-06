@@ -76,7 +76,7 @@ public class GameMenuView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
 
@@ -90,7 +90,7 @@ public class GameMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println("\n*** startSaveGame function called ***");
+        this.console.println("\n*** startSaveGame function called ***");
     }
 
     private void moveUp() {
@@ -101,7 +101,7 @@ public class GameMenuView extends View {
         if (map.getCurrentRow() > 0) {
             MapControl.movePlayer(map, map.getCurrentRow() - 1, map.getCurrentColumn());
         } else {
-            System.out.println("\nCannot move up any further.");
+            this.console.println("\nCannot move up any further.");
         }
     }
 
@@ -112,7 +112,7 @@ public class GameMenuView extends View {
         if (map.getCurrentRow() < map.getRowCount() - 1) {
             MapControl.movePlayer(map, map.getCurrentRow() + 1, map.getCurrentColumn());
         } else {
-            System.out.println("\nCannot move down any furter.");
+            this.console.println("\nCannot move down any furter.");
         }
     }
 
@@ -124,7 +124,7 @@ public class GameMenuView extends View {
         if (map.getCurrentColumn() > 0) {
             MapControl.movePlayer(map, map.getCurrentRow(), map.getCurrentColumn() - 1);
         } else {
-            System.out.println("\nCannot move any further to the left.");
+            this.console.println("\nCannot move any further to the left.");
         }
     }
 
@@ -136,7 +136,7 @@ public class GameMenuView extends View {
         if (map.getCurrentColumn() < map.getColumnCount() - 1) {
             MapControl.movePlayer(map, map.getCurrentRow(), map.getCurrentColumn() + 1);
         } else {
-            System.out.println("\nCannot move any further to the right.");
+            this.console.println("\nCannot move any further to the right.");
         }
     }
 
@@ -166,13 +166,13 @@ public class GameMenuView extends View {
         Map map = game.getMap(); // retreive the map from game
         Location[][] locations = map.getLocations(); // retreive the locations from map
 
-        System.out.print("  |");
+        this.console.print("  |");
         for (int column = 0; column < locations[0].length; column++) {
-            System.out.print("  " + column + " |"); // print col numbers to side of map
+            this.console.print("  " + column + " |"); // print col numbers to side of map
         }
-        System.out.println();
+        this.console.println();
         for (int row = 0; row < locations.length; row++) {
-            System.out.print(row + " "); // print row numbers to side of map
+            this.console.print(row + " "); // print row numbers to side of map
             for (int column = 0; column < locations[row].length; column++) {
                 leftIndicator = " ";
                 rightIndicator = " ";
@@ -183,14 +183,14 @@ public class GameMenuView extends View {
                     leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
                     rightIndicator = "<"; // same as above
                 }
-                System.out.print("|"); // start map with a |
+                this.console.print("|"); // start map with a |
                 if (locations[row][column].getScene() == null) {
-                    System.out.print(leftIndicator + "??" + rightIndicator);
+                    this.console.print(leftIndicator + "??" + rightIndicator);
                 } else {
-                    System.out.print(leftIndicator + locations[row][column].getScene().getSymbol() + rightIndicator);
+                    this.console.print(leftIndicator + locations[row][column].getScene().getSymbol() + rightIndicator);
                 }
             }
-            System.out.println("|");
+            this.console.println("|");
         }
     }
 }
