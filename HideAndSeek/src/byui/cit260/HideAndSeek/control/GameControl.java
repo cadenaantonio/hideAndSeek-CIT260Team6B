@@ -2,6 +2,7 @@ package byui.cit260.HideAndSeek.control;
 
 import byui.cit260.HideAndSeek.control.MapControl;
 import byui.cit260.HideAndSeek.enu.SceneType;
+import byui.cit260.HideAndSeek.exceptions.GameControlException;
 import byui.cit260.HideAndSeek.model.Game;
 import byui.cit260.HideAndSeek.model.Hero;
 import byui.cit260.HideAndSeek.model.Inventory;
@@ -12,6 +13,9 @@ import byui.cit260.HideAndSeek.model.Player;
 import byui.cit260.HideAndSeek.model.Scene;
 import byui.cit260.HideAndSeek.model.Weapon;
 import hideandseek.HideAndSeek;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 /**
  *
@@ -143,4 +147,36 @@ public class GameControl {
         locations[4][3].setScene(scenes[SceneType.trainStation.ordinal()]);
         locations[4][4].setScene(scenes[SceneType.antoniosPark.ordinal()]);
     }
+
+    public static void saveGame(Game game, String filepath) 
+        throws GameControlException {
+        
+        try( FileOutputStream fops = new FileOutputStream(filepath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+
+            output.writeObject(game);    //write the game object out to file    }
+        } catch (Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+    }
+
+    public static void getSavedGame(String filePath) 
+        throws GameControlException {
+        
+        Game game = null;
+        
+        try( FileInputStream fips = new FileInputStream(filepath)) {
+            ObjectInputStream input = ObjectInputStream(fips);
+            
+            game = (Game) input.readObject(); // read the game object from file
+        }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+        
+        // close the output file
+        HideAndSeek.setCurrentGame(game); save in HideAndSeek;
+     
+    }
 }
+
