@@ -94,15 +94,38 @@ public class GameMenuView extends View {
     }
 
     private void moveUp() {
-        System.out.println("\n*** moveUp function called ***");
+        Game game = HideAndSeek.getCurrentGame(); // retreive the game
+        Map map = game.getMap(); // retreive the map from game
+        //Location[][] locations = map.getLocations(); // retreive the locations from map
+
+        if (map.getCurrentRow() > 0) {
+            MapControl.movePlayer(map, map.getCurrentRow() - 1, map.getCurrentColumn());
+        } else {
+            System.out.println("\nCannot move up any further.");
+        }
     }
 
     private void moveDown() {
-        System.out.println("\n*** moveDown function called ***");
+        Game game = HideAndSeek.getCurrentGame(); //retrieve the game
+        Map map = game.getMap(); // retreive the map from game
+        
+        if (map.getCurrentRow() < map.getRowCount() - 1) {
+            MapControl.movePlayer(map, map.getCurrentRow() + 1, map.getCurrentColumn());
+        } else {
+            System.out.println("\nCannot move down any furter.");
+        }
     }
 
     private void MoveLeft() {
-        System.out.println("\n*** moveLeft function called ***");
+        Game game = HideAndSeek.getCurrentGame(); // retreive the game
+        Map map = game.getMap(); // retreive the map from game
+        //Location[][] locations = map.getLocations(); // retreive the locations from map
+
+        if (map.getCurrentColumn() > 0) {
+            MapControl.movePlayer(map, map.getCurrentRow(), map.getCurrentColumn() - 1);
+        } else {
+            System.out.println("\nCannot move any further to the left.");
+        }
     }
 
     private void moveRight() {
