@@ -8,6 +8,7 @@ package byui.cit260.HideAndSeek.view;
 import byui.cit260.HideAndSeek.control.GameControl;
 import byui.cit260.HideAndSeek.control.MapControl;
 import byui.cit260.HideAndSeek.model.Game;
+import byui.cit260.HideAndSeek.model.Inventory;
 import byui.cit260.HideAndSeek.model.Location;
 import byui.cit260.HideAndSeek.model.Map;
 import hideandseek.HideAndSeek;
@@ -157,8 +158,32 @@ public class GameMenuView extends View {
 
     private void displayInventoryMenu() {
         // call InventoryMenuView class
-        InventoryMenuView inventoryMenu = new InventoryMenuView();
-        inventoryMenu.display();
+        StringBuilder line;
+        Game game = HideAndSeek.getCurrentGame();
+        Inventory[] inventory = game.getInventory();
+        
+        System.out.println("\nLIST OF INVENTORY ITEMS");
+        line = new StringBuilder("                  ");
+        line.insert(0,"NAME");
+        line.insert(20,"DESCRIPTION");
+        line.insert(30,"ITEM COUNT");
+//        line.insert(320,"AQUIRED");
+        
+//        line.insert(50,"REQUIRED") Potentially Add to Code? HandCuffs? TODO
+        System.out.println(line.toString());
+        
+//        InventoryMenuView inventoryMenu = new InventoryMenuView();
+//        inventoryMenu.display();
+        for (Inventory item : inventory){
+          line = new StringBuilder("                  ");  
+          line.insert(0, item.getName());
+        line.insert(23,item.getDescription());
+        line.insert(133,item.getItemCount());
+//        line.insert(53, item.getAquired());
+        
+        //display the line
+        System.out.println(line.toString());
+        }
     }
 
     private void viewMap() {
