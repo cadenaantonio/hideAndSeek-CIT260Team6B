@@ -33,7 +33,8 @@ public class SearchTheAreaView extends View {
         switch (value) {
 
             case "D": // disarm bomb
-                this.disarmBomb();
+                Story1View storyview = new Story1View();
+                storyview.display();
                 break;
             case "C": // captureVillian
                 this.captureVillian();
