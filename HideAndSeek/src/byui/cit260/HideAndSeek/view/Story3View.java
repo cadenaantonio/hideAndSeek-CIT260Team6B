@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  */
 public class Story3View extends View {
 
-    private String displayMessageOne
+    private String displayMessageOne //TODO do we still need these messages?
             = "\n******************************************************"
             + "\n******************************************************"
             + "\n*** Answer these three question to caputre Maul.   ***"
