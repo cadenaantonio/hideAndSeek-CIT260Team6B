@@ -16,6 +16,7 @@ import hideandseek.HideAndSeek;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+import java.io.ObjectInputStream;
 
 /**
  *
@@ -165,8 +166,8 @@ public class GameControl {
         
         Game game = null;
         
-        try( FileInputStream fips = new FileInputStream(filepath)) {
-            ObjectInputStream input = ObjectInputStream(fips);
+        try( FileInputStream fips = new FileInputStream(filePath)) {
+            ObjectInputStream input = new ObjectInputStream(fips);
             
             game = (Game) input.readObject(); // read the game object from file
         }
@@ -175,8 +176,7 @@ public class GameControl {
         }
         
         // close the output file
-        HideAndSeek.setCurrentGame(game); save in HideAndSeek;
+        HideAndSeek.setCurrentGame(game); //save in HideAndSeek;
      
     }
 }
-

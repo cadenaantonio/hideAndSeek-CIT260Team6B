@@ -180,11 +180,11 @@ public class HideAndSeek {
             
             // open log file
             String filePath = "log.txt";
-            HideAndSeek.logFile = new PrintWriter(filePath); //C:\Users\Documents\tmp\logfile.txt
+            HideAndSeek.logFile = new PrintWriter(filePath);
             
         // create StartProgramViewOrig and display the start program view
         StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayStartProgramView();
+        startProgramView.display();
         return;
         
         } catch (Throwable e) {

@@ -74,6 +74,10 @@ public class GameMenuView extends View {
             case "S": // save the current game
                 this.saveGame();
                 break;
+            case "Z":
+                Story3View storyview = new Story3View();
+                storyview.display();
+                break;
 
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
@@ -108,7 +112,7 @@ public class GameMenuView extends View {
     private void moveDown() {
         Game game = HideAndSeek.getCurrentGame(); //retrieve the game
         Map map = game.getMap(); // retreive the map from game
-        
+
         if (map.getCurrentRow() < map.getRowCount() - 1) {
             MapControl.movePlayer(map, map.getCurrentRow() + 1, map.getCurrentColumn());
         } else {

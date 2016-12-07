@@ -13,12 +13,12 @@ import java.util.Scanner;
  *
  * @author DragonMaster
  */
-public class StartProgramView {
+public class StartProgramView extends View {
 
     private String promptMessage;
 
     public StartProgramView() {
-        this.promptMessage = "\nPlease enter your name: ";
+        super("\nPlease enter your name: ");
         // display the banner when the view is created
         this.displayBanner();
     }
@@ -41,44 +41,45 @@ public class StartProgramView {
         );
     }
 
-    public void displayStartProgramView() {
+//    public void displayStartProgramView() {
+//
+//        boolean done = false; //set flag to not done
+//        do {
+//            //promptfor and get players name
+//            this.promptMessage = "\nPlease enter your name: "; //added this because without it, the game looks like it just froze. Expecting an entry without a prompt is a bad idea.
+//            String playersName = this.getPlayersName();
+//            if (playersName.toUpperCase().equals("Q")) // user wants to quite
+//            {
+//                return; // exit the game
+//            }
+//            //do the requested action and display the next view
+//            done = this.doAction(playersName);
+//
+//        } while (!done);
+//    }
 
-        boolean done = false; //set flag to not done
-        do {
-            //promptfor and get players name
-            this.promptMessage = "\nPlease enter your name: "; //added this because without it, the game looks like it just froze. Expecting an entry without a prompt is a bad idea.
-            String playersName = this.getPlayersName();
-            if (playersName.toUpperCase().equals("Q")) // user wants to quite
-            {
-                return; // exit the game
-            }
-            //do the requested action and display the next view
-            done = this.doAction(playersName);
+//    private String getPlayersName() {
+//        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+//        String value = ""; //value to be returned
+//        boolean valid = false; //initialize to not valid
+//
+//        while (!valid) {//loop while an invalid value is entered
+//            System.out.println("\n" + this.promptMessage);
+//
+//            value = keyboard.nextLine();//get next line typed on keyboard
+//            value = value.trim();//trim off leading and trailing blanks
+//
+//            if (value.length() < 1) {// value is blank
+//                System.out.println("\nInvalid value: Value can not be blank");
+//                continue;
+//            }
+//            break; //end the loop
+//        }
+//        return value; // return the value entered
+//    }
 
-        } while (!done);
-    }
-
-    private String getPlayersName() {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid
-
-        while (!valid) {//loop while an invalid value is entered
-            System.out.println("\n" + this.promptMessage);
-
-            value = keyboard.nextLine();//get next line typed on keyboard
-            value = value.trim();//trim off leading and trailing blanks
-
-            if (value.length() < 1) {// value is blank
-                System.out.println("\nInvalid value: Value can not be blank");
-                continue;
-            }
-            break; //end the loop
-        }
-        return value; // return the value entered
-    }
-
-    private boolean doAction(String playersName) {
+@Override
+    public boolean doAction(String playersName) {
         if (playersName.length() < 2) {
             System.out.println("\nInvalid players name: "
                     + "The name must be greater than one character in length");
