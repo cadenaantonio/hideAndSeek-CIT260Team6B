@@ -13,6 +13,7 @@ import byui.cit260.HideAndSeek.model.Location;
 import byui.cit260.HideAndSeek.model.Map;
 import hideandseek.HideAndSeek;
 import java.util.Scanner;
+import byui.cit260.HideAndSeek.enu.InventoryType;
 
 /**
  *
@@ -165,7 +166,7 @@ public class GameMenuView extends View {
         System.out.println("\nLIST OF INVENTORY ITEMS");
         line = new StringBuilder("                  ");
         line.insert(0,"NAME");
-        line.insert(20,"DESCRIPTION");
+        line.insert(15,"DESCRIPTION");
         line.insert(30,"ITEM COUNT");
 //        line.insert(320,"AQUIRED");
         
@@ -175,7 +176,7 @@ public class GameMenuView extends View {
 //        InventoryMenuView inventoryMenu = new InventoryMenuView();
 //        inventoryMenu.display();
         for (Inventory item : inventory){
-          line = new StringBuilder("                  ");  
+          line = new StringBuilder("\n                 ");  
           line.insert(0, item.getName());
         line.insert(23,item.getDescription());
         line.insert(133,item.getItemCount());
