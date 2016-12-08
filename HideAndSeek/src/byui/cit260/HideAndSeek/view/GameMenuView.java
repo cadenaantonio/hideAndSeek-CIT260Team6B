@@ -167,7 +167,7 @@ public class GameMenuView extends View {
         line = new StringBuilder("                  ");
         line.insert(0,"NAME");
         line.insert(15,"ITEM COUNT");
-        line.insert(30,"DESCRIPTION");
+        line.insert(30,"TYPE");
         
 //        line.insert(320,"AQUIRED");
         
@@ -180,7 +180,7 @@ public class GameMenuView extends View {
           line = new StringBuilder("                 ");  
           line.insert(0, item.getName());
           line.insert(20,item.getItemCount());
-          line.insert(35,item.getDescription());
+          line.insert(35,item.getType());
           
 //        line.insert(53, item.getAquired());
         

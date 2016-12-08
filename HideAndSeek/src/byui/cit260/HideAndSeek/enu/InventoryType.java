@@ -11,7 +11,7 @@ public enum InventoryType implements Serializable {
     abilityPotion("Ability Potion","Heals one ability point", 1, "Healer"),
     abilityElixer("Ability Elixer","Heals all ability points", 1,"Healer"),
     knife("Knife","Used to cut wires on bombs, PSA do not use bombs",1,"Weapon"),
-    gun("Ice Gun","Used to freeze bombs, using on milk does not produce ice cream",1,"Weapon"),
+    iceGun("Ice Gun","Used to freeze bombs, using on milk does not produce ice cream",1,"Weapon"),
     handcuff("Handcuffs"," Necessary Item to capture Villian, warning no safety release",1,"Weapon"),
     sonar("Sonar","A hero's ability used to give general direction of Villian, does not make user a whale",1,"Ability"),
     superSense("Super Sense","A hero's ability to sense if a bomb is nearby, later used for airport security",1,"Ability"),
