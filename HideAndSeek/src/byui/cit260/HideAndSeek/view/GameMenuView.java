@@ -77,7 +77,7 @@ public class GameMenuView extends View {
                 this.saveGame();
                 break;
             case "Z": // TODO remove before finishing game
-                Story3View storyview = new Story3View();
+                Story2View storyview = new Story2View();
                 storyview.display();
                 break;
 
