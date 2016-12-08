@@ -1,6 +1,7 @@
 package byui.cit260.HideAndSeek.control;
 
 import byui.cit260.HideAndSeek.control.MapControl;
+import byui.cit260.HideAndSeek.enu.InventoryType;
 import byui.cit260.HideAndSeek.enu.SceneType;
 import byui.cit260.HideAndSeek.exceptions.GameControlException;
 import byui.cit260.HideAndSeek.model.Game;
@@ -63,49 +64,59 @@ public class GameControl {
         Inventory[] inventory = new Inventory[9];
 
         Inventory abilityPotion = new Inventory();
-        abilityPotion.setDescription("Ability Potion");
-        abilityPotion.setItemCount(5);
-        inventory[Items.abilityPotion.ordinal()] = abilityPotion;
+        abilityPotion.setName(InventoryType.abilityPotion.name());
+        abilityPotion.setDescription(InventoryType.abilityPotion.description());
+        abilityPotion.setItemCount(InventoryType.abilityPotion.itemCount());
+        abilityPotion.setType(InventoryType.abilityPotion.type());
+        inventory[InventoryType.abilityPotion.ordinal()] = abilityPotion;
 
         Inventory abilityElixer = new Inventory();
-        abilityElixer.setDescription("Ability Elixer");
-        abilityElixer.setItemCount(2);
-        inventory[Items.abilityElixer.ordinal()] = abilityElixer;
+        abilityElixer.setName(InventoryType.abilityElixer.name());
+        abilityElixer.setDescription(InventoryType.abilityElixer.description());
+        abilityElixer.setItemCount(InventoryType.abilityElixer.itemCount());
+        inventory[InventoryType.abilityElixer.ordinal()] = abilityElixer;
 
         Inventory knife = new Inventory();
-        knife.setDescription("Knife");
-        knife.setItemCount(1);
-        inventory[Weapon.knife.ordinal()] = knife;
+        knife.setName(InventoryType.knife.name());
+        knife.setDescription(InventoryType.knife.description());
+        knife.setItemCount(InventoryType.knife.itemCount());
+        inventory[InventoryType.knife.ordinal()] = knife;
 
         Inventory iceGun = new Inventory();
-        iceGun.setDescription("Ice Gun");
-        iceGun.setItemCount(1);
-        inventory[Weapon.iceGun.ordinal()] = iceGun;
+        iceGun.setName(InventoryType.gun.name());
+        iceGun.setDescription(InventoryType.gun.description());
+        iceGun.setItemCount(InventoryType.gun.itemCount());
+        inventory[InventoryType.gun.ordinal()] = iceGun;
 
         Inventory handcuff = new Inventory();
-        handcuff.setDescription("Handcuff");
-        handcuff.setItemCount(1);
-        inventory[Weapon.handcuff.ordinal()] = handcuff;
+        handcuff.setName(InventoryType.handcuff.name());
+        handcuff.setDescription(InventoryType.handcuff.description());
+        handcuff.setItemCount(InventoryType.handcuff.itemCount());
+        inventory[InventoryType.handcuff.ordinal()] = handcuff;
 
         Inventory sonar = new Inventory();
-        sonar.setDescription("Sonar");
-        sonar.setItemCount(2);
-        inventory[Hero.sonar.ordinal()] = sonar;
+        sonar.setName(InventoryType.sonar.name());
+        sonar.setDescription(InventoryType.sonar.description());
+        sonar.setItemCount(InventoryType.sonar.itemCount());
+        inventory[InventoryType.sonar.ordinal()] = sonar;
 
         Inventory superSense = new Inventory();
-        superSense.setDescription("Super Sense");
-        superSense.setItemCount(2);
-        inventory[Hero.superSense.ordinal()] = superSense;
+        superSense.setName(InventoryType.superSense.name());
+        superSense.setDescription(InventoryType.superSense.description());
+        superSense.setItemCount(InventoryType.superSense.itemCount());
+        inventory[InventoryType.superSense.ordinal()] = superSense;
 
         Inventory megaMind = new Inventory();
-        megaMind.setDescription("Mega-Mind");
-        megaMind.setItemCount(2);
-        inventory[Hero.megaMind.ordinal()] = megaMind;
+        megaMind.setName(InventoryType.megaMind.name());
+        megaMind.setDescription(InventoryType.megaMind.description());
+        megaMind.setItemCount(InventoryType.megaMind.itemCount());
+        inventory[InventoryType.megaMind.ordinal()] = megaMind;
 
         Inventory flight = new Inventory();
-        flight.setDescription("Flight");
-        flight.setItemCount(2);
-        inventory[Hero.flight.ordinal()] = flight;
+        flight.setName(InventoryType.flight.name());
+        flight.setDescription(InventoryType.flight.description());
+        flight.setItemCount(InventoryType.flight.itemCount());
+        inventory[InventoryType.flight.ordinal()] = flight;
 
         return inventory;
     }

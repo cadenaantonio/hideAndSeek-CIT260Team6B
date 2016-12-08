@@ -166,8 +166,9 @@ public class GameMenuView extends View {
         System.out.println("\nLIST OF INVENTORY ITEMS");
         line = new StringBuilder("                  ");
         line.insert(0,"NAME");
-        line.insert(15,"DESCRIPTION");
-        line.insert(30,"ITEM COUNT");
+        line.insert(15,"ITEM COUNT");
+        line.insert(30,"DESCRIPTION");
+        
 //        line.insert(320,"AQUIRED");
         
 //        line.insert(50,"REQUIRED") Potentially Add to Code? HandCuffs? TODO
@@ -176,10 +177,11 @@ public class GameMenuView extends View {
 //        InventoryMenuView inventoryMenu = new InventoryMenuView();
 //        inventoryMenu.display();
         for (Inventory item : inventory){
-          line = new StringBuilder("\n                 ");  
+          line = new StringBuilder("                 ");  
           line.insert(0, item.getName());
-        line.insert(23,item.getDescription());
-        line.insert(133,item.getItemCount());
+          line.insert(20,item.getItemCount());
+          line.insert(35,item.getDescription());
+          
 //        line.insert(53, item.getAquired());
         
         //display the line
