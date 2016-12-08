@@ -8,35 +8,43 @@ import java.io.Serializable;
  */
 public enum InventoryType implements Serializable {
 
-    abilityPotion("Ability Potion","Heals one ability point", 1, "Healer"),
-    abilityElixer("Ability Elixer","Heals all ability points", 1,"Healer"),
-    knife("Knife","Used to cut wires on bombs, PSA do not use bombs",1,"Weapon"),
-    iceGun("Ice Gun","Used to freeze bombs, using on milk does not produce ice cream",1,"Weapon"),
-    handcuff("Handcuffs"," Necessary Item to capture Villian, warning no safety release",1,"Weapon"),
-    sonar("Sonar","A hero's ability used to give general direction of Villian, does not make user a whale",1,"Ability"),
-    superSense("Super Sense","A hero's ability to sense if a bomb is nearby, later used for airport security",1,"Ability"),
-    megaMind("Mega Mind","A hero's ability to narrow answers to a range, does not work on lottery tickets",1,"Ability"),
-    flight("Flight"," A hero's ability to fly to different location on map, NO CAPES",1,"Ability");
+
+
+    abilityPotion("Ability Potion", "Healer", 1, "Heals one ability point"),
+    abilityElixer("Ability Elixer", "Healer", 1, "Heals all ability points"),
+    knife("Knife", "Weapon", 1, "Used to cut wires on bombs"),
+    gun("Ice Gun","Weapon", 1, "Used to freeze bombs"),
+    handcuff("Handcuffs","Weapon", 1, "Necessary Item to capture Villian"),
+    sonar("Sonar","Ability", 1, "Ability give general direction of Villian"),
+    superSense("Super Sense","Ability", 1, "Ability to sense if a bomb is nearby"),
+    megaMind("Mega Mind","Ability", 1, "Ability to narrow answers to a range"),
+    flight("Flight","Ability", 1, "Ability to fly to different location on map");
+
 
     private String name;
-    private String description;
-    private int itemCount;
     private String type;
-
-    private InventoryType(String name, String description, int itemCount, String type) {
+    private int itemCount;
+    private String description;
+    
+    private InventoryType(String name, String type, int itemCount,String description  ) {
         this.name = name;
         this.description = description;
         this.itemCount = itemCount;
         this.type = type;
       
     }
-    public String description(){
-        return this.description;
-    }
-    public String type(){
+    
+        public String title(){
+            return this.name;
+        }
+    
+       public String type(){
         return this.type;
     }
-    public int itemCount(){
+       public int itemCount(){
         return this.itemCount;
+    }
+       public String description(){
+        return this.description;
     }
 }
