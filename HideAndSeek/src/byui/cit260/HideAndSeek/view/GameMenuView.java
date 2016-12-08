@@ -166,9 +166,9 @@ public class GameMenuView extends View {
         System.out.println("\nLIST OF INVENTORY ITEMS");
         line = new StringBuilder("                  ");
         line.insert(0,"NAME");
-        line.insert(14,"TYPE");
-        line.insert(19,"AMOUNT");
-        line.insert(27,"DESCRIPTION");
+        line.insert(15,"TYPE");
+        line.insert(22,"AMT");
+        line.insert(26,"DESCRIPTION");
         
 //        line.insert(320,"AQUIRED");
         
@@ -179,10 +179,10 @@ public class GameMenuView extends View {
 //        inventoryMenu.display();
         for (Inventory item : inventory){
           line = new StringBuilder("                 ");  
-          line.insert(0, item.getName());
-          line.insert(14,item.getType());
-          line.insert(22,item.getItemCount());
-          line.insert(25,item.getDescription());
+          line.insert(0, item.getNameB());
+          line.insert(15,item.getType());
+          line.insert(23,item.getItemCount());
+          line.insert(26,item.getDescription());
 //        line.insert(53, item.getAquired());
         
         //display the line

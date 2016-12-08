@@ -12,30 +12,30 @@ public enum InventoryType implements Serializable {
 
     abilityPotion("Ability Potion", "Healer", 1, "Heals one ability point"),
     abilityElixer("Ability Elixer", "Healer", 1, "Heals all ability points"),
-    knife("Knife", "Weapon", 1, "Used to cut wires on bombs"),
-    gun("Ice Gun","Weapon", 1, "Used to freeze bombs"),
-    handcuff("Handcuffs","Weapon", 1, "Necessary Item to capture Villian"),
-    sonar("Sonar","Ability", 1, "Ability give general direction of Villian"),
-    superSense("Super Sense","Ability", 1, "Ability to sense if a bomb is nearby"),
-    megaMind("Mega Mind","Ability", 1, "Ability to narrow answers to a range"),
-    flight("Flight","Ability", 1, "Ability to fly to different location on map");
+    knife("Knife", "Weapon", 1, "Cuts wires on bombs"),
+    gun("Ice Gun","Weapon", 1, "Helps freeze bombs"),
+    handcuff("Handcuffs","Weapon", 1, "Used to capture Villian"),
+    sonar("Sonar","Ability", 1, "Gives Villian's direction"),
+    superSense("Super Sense","Ability", 1, "Sense if a bomb is nearby"),
+    megaMind("Mega Mind","Ability", 1, "Narrows answers to a range"),
+    flight("Flight","Ability", 1, "Fly to location on the map");
 
 
-    private String name;
+    private String nameB;
     private String type;
     private int itemCount;
     private String description;
     
-    private InventoryType(String name, String type, int itemCount,String description  ) {
-        this.name = name;
+    private InventoryType(String nameB, String type, int itemCount,String description  ) {
+        this.nameB = nameB;
         this.description = description;
         this.itemCount = itemCount;
         this.type = type;
       
     }
     
-        public String title(){
-            return this.name;
+        public String nameB(){
+            return this.nameB;
         }
     
        public String type(){

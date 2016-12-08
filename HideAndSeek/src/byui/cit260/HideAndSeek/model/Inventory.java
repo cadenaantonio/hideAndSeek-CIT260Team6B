@@ -12,7 +12,7 @@ public class Inventory implements Serializable {
     private String aquired;
     private String description;
     private int itemCount;
-    private String name;
+    private String nameB;
     private String type;
 
 //    private Game game;
@@ -44,12 +44,12 @@ public class Inventory implements Serializable {
         this.itemCount = itemCount;
     }
 
-    public String getName() {
-        return name;
+    public String getNameB() {
+        return nameB;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameB(String nameB) {
+        this.nameB = nameB;
     }
 
     public String getType() {
@@ -70,7 +70,7 @@ public class Inventory implements Serializable {
 //    
     @Override
     public String toString() {
-        return "Inventory{" + "aquired=" + aquired + ", description=" + description + ", itemCount=" + itemCount + ", name=" + name + '}';
+        return "Inventory{" + "aquired=" + aquired + ", description=" + description + ", itemCount=" + itemCount + ", nameB=" + nameB + '}';
     }
 
 }

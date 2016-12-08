@@ -64,28 +64,28 @@ public class GameControl {
         Inventory[] inventory = new Inventory[9];
 
         Inventory abilityPotion = new Inventory();
-        abilityPotion.setName(InventoryType.abilityPotion.name());
+        abilityPotion.setNameB(InventoryType.abilityPotion.nameB());
         abilityPotion.setDescription(InventoryType.abilityPotion.description());
         abilityPotion.setItemCount(InventoryType.abilityPotion.itemCount());
         abilityPotion.setType(InventoryType.abilityPotion.type());
         inventory[InventoryType.abilityPotion.ordinal()] = abilityPotion;
 
         Inventory abilityElixer = new Inventory();
-        abilityElixer.setName(InventoryType.abilityElixer.name());
+        abilityElixer.setNameB(InventoryType.abilityElixer.nameB());
         abilityElixer.setDescription(InventoryType.abilityElixer.description());
         abilityElixer.setItemCount(InventoryType.abilityElixer.itemCount());
         abilityElixer.setType(InventoryType.abilityElixer.type());
         inventory[InventoryType.abilityElixer.ordinal()] = abilityElixer;
 
         Inventory knife = new Inventory();
-        knife.setName(InventoryType.knife.name());
+        knife.setNameB(InventoryType.knife.nameB());
         knife.setDescription(InventoryType.knife.description());
         knife.setItemCount(InventoryType.knife.itemCount());
         knife.setType(InventoryType.knife.type());
         inventory[InventoryType.knife.ordinal()] = knife;
 
         Inventory iceGun = new Inventory();
-        iceGun.setName(InventoryType.gun.name());
+        iceGun.setNameB(InventoryType.gun.nameB());
         iceGun.setDescription(InventoryType.gun.description());
         iceGun.setItemCount(InventoryType.gun.itemCount());
         iceGun.setType(InventoryType.gun.type());
@@ -93,35 +93,35 @@ public class GameControl {
 
 
         Inventory handcuff = new Inventory();
-        handcuff.setName(InventoryType.handcuff.name());
+        handcuff.setNameB(InventoryType.handcuff.nameB());
         handcuff.setDescription(InventoryType.handcuff.description());
         handcuff.setItemCount(InventoryType.handcuff.itemCount());
         handcuff.setType(InventoryType.handcuff.type());
         inventory[InventoryType.handcuff.ordinal()] = handcuff;
 
         Inventory sonar = new Inventory();
-        sonar.setName(InventoryType.sonar.name());
+        sonar.setNameB(InventoryType.sonar.nameB());
         sonar.setDescription(InventoryType.sonar.description());
         sonar.setItemCount(InventoryType.sonar.itemCount());
         sonar.setType(InventoryType.sonar.type());
         inventory[InventoryType.sonar.ordinal()] = sonar;
 
         Inventory superSense = new Inventory();
-        superSense.setName(InventoryType.superSense.name());
+        superSense.setNameB(InventoryType.superSense.nameB());
         superSense.setDescription(InventoryType.superSense.description());
         superSense.setItemCount(InventoryType.superSense.itemCount());
         superSense.setType(InventoryType.superSense.type());
         inventory[InventoryType.superSense.ordinal()] = superSense;
 
         Inventory megaMind = new Inventory();
-        megaMind.setName(InventoryType.megaMind.name());
+        megaMind.setNameB(InventoryType.megaMind.nameB());
         megaMind.setDescription(InventoryType.megaMind.description());
         megaMind.setItemCount(InventoryType.megaMind.itemCount());
         megaMind.setType(InventoryType.megaMind.type());
         inventory[InventoryType.megaMind.ordinal()] = megaMind;
 
         Inventory flight = new Inventory();
-        flight.setName(InventoryType.flight.name());
+        flight.setNameB(InventoryType.flight.nameB());
         flight.setDescription(InventoryType.flight.description());
         flight.setItemCount(InventoryType.flight.itemCount());
         flight.setType(InventoryType.flight.type());
