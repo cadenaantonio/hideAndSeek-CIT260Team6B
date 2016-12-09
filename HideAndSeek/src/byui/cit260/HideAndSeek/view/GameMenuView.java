@@ -35,7 +35,7 @@ public class GameMenuView extends View {
                 + "\nI - Inventory"
                 + "\nM - View Map"
                 + "\nH - Get help on how to play the game"
-                + "\nS - Save Game"
+//                + "\nS - Save Game"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------------");
     }
@@ -73,13 +73,13 @@ public class GameMenuView extends View {
             case "H": // display the help menu 
                 this.displayHelpMenu();
                 break;
-            case "S": // save the current game
-                this.saveGame();
-                break;
-            case "Z": // TODO remove before finishing game
-                Story2View storyview = new Story2View();
-                storyview.display();
-                break;
+//            case "S": // save the current game
+//                this.saveGame();
+//                break;
+//            case "Z": // TODO remove before finishing game
+//                Story2View storyview = new Story2View();
+//                storyview.display();
+//                break;
 
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
@@ -166,7 +166,7 @@ public class GameMenuView extends View {
         Game game = HideAndSeek.getCurrentGame();
         Inventory[] inventory = game.getInventory();
 
-        System.out.println("\nLIST OF INVENTORY ITEMS");
+        this.console.println("\nLIST OF INVENTORY ITEMS");
         line = new StringBuilder("                  ");
         line.insert(0, "NAME");
         line.insert(15, "TYPE");
@@ -175,7 +175,7 @@ public class GameMenuView extends View {
 
 //        line.insert(320,"AQUIRED");
 //        line.insert(50,"REQUIRED") Potentially Add to Code? HandCuffs? TODO
-        System.out.println(line.toString());
+        this.console.println(line.toString());
 
         for (Inventory item : inventory) {
             line = new StringBuilder("                 ");
@@ -186,7 +186,7 @@ public class GameMenuView extends View {
 //        line.insert(53, item.getAquired());
 
             //display the line
-            System.out.println(line.toString());
+            this.console.println(line.toString());
 
         }
         InventoryMenuView inventoryMenu = new InventoryMenuView();

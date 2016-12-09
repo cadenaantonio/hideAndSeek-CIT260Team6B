@@ -22,6 +22,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -30,7 +31,7 @@ import java.util.logging.Logger;
  *
  * @author Antonio Cadena
  */
-public class HideAndSeek {
+public class HideAndSeek implements Serializable{
 
     private static Game currentGame = null;
     private static Player player = null;

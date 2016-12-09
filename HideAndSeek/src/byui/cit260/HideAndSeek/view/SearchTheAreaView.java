@@ -37,10 +37,12 @@ public class SearchTheAreaView extends View {
                 storyview.display();
                 break;
             case "C": // captureVillian
-                this.captureVillian();
+                Story2View storyview2 = new Story2View();
+                storyview2.display();
                 break;
             case "A": //Add Hero   
-                this.addHero();
+                Story3View storyview3 = new Story3View();
+                storyview3.display();
                 break;
             default:
                 this.console.println("\n*** Invalid selection *** Try Again");
