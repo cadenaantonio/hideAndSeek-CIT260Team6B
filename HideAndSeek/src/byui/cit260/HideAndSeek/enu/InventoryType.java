@@ -10,15 +10,15 @@ public enum InventoryType implements Serializable {
 
 
 
-    abilityPotion("Ability Potion", "Healer", 1, "Heals one ability point"),
+    abilityPotion("Ability Potion", "Healer", 5, "Heals one ability point"),
     abilityElixer("Ability Elixer", "Healer", 1, "Heals all ability points"),
     knife("Knife", "Weapon", 1, "Cuts wires on bombs"),
     iceGun("Ice Gun","Weapon", 1, "Helps freeze bombs"),
     handcuff("Handcuffs","Weapon", 1, "Used to capture Villian"),
-    sonar("Sonar","Ability", 1, "Gives Villian's direction"),
-    superSense("Super Sense","Ability", 1, "Sense if a bomb is nearby"),
+    sonar("Sonar","Ability", 3, "Gives Villian's direction"),
+    superSense("Super Sense","Ability", 5, "Sense if a bomb is nearby"),
     megaMind("Mega Mind","Ability", 1, "Narrows answers to a range"),
-    flight("Flight","Ability", 1, "Fly to location on the map");
+    flight("Flight","Ability", 2, "Fly to location on the map");
 
 
     private String nameB;
