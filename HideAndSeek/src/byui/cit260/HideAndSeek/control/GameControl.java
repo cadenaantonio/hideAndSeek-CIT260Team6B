@@ -85,11 +85,11 @@ public class GameControl {
         inventory[InventoryType.knife.ordinal()] = knife;
 
         Inventory iceGun = new Inventory();
-        iceGun.setNameB(InventoryType.gun.nameB());
-        iceGun.setDescription(InventoryType.gun.description());
-        iceGun.setItemCount(InventoryType.gun.itemCount());
-        iceGun.setType(InventoryType.gun.type());
-        inventory[InventoryType.gun.ordinal()] = iceGun;
+        iceGun.setNameB(InventoryType.iceGun.nameB());
+        iceGun.setDescription(InventoryType.iceGun.description());
+        iceGun.setItemCount(InventoryType.iceGun.itemCount());
+        iceGun.setType(InventoryType.iceGun.type());
+        inventory[InventoryType.iceGun.ordinal()] = iceGun;
 
 
         Inventory handcuff = new Inventory();
