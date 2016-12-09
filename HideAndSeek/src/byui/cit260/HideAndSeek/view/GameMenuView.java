@@ -99,7 +99,7 @@ public class GameMenuView extends View {
         this.console.println("\n*** startSaveGame function called ***");
         //MainMenuView mainMenu = new MainMenuView();
         //mainMenu.saveGame();
-        
+
     }
 
     private void moveUp() {
@@ -165,32 +165,32 @@ public class GameMenuView extends View {
         StringBuilder line;
         Game game = HideAndSeek.getCurrentGame();
         Inventory[] inventory = game.getInventory();
-        
+
         System.out.println("\nLIST OF INVENTORY ITEMS");
         line = new StringBuilder("                  ");
-        line.insert(0,"NAME");
-        line.insert(15,"TYPE");
-        line.insert(22,"AMT");
-        line.insert(26,"DESCRIPTION");
-        
+        line.insert(0, "NAME");
+        line.insert(15, "TYPE");
+        line.insert(22, "AMT");
+        line.insert(26, "DESCRIPTION");
+
 //        line.insert(320,"AQUIRED");
-        
 //        line.insert(50,"REQUIRED") Potentially Add to Code? HandCuffs? TODO
         System.out.println(line.toString());
-        
-//        InventoryMenuView inventoryMenu = new InventoryMenuView();
-//        inventoryMenu.display();
-        for (Inventory item : inventory){
-          line = new StringBuilder("                 ");  
-          line.insert(0, item.getNameB());
-          line.insert(15,item.getType());
-          line.insert(23,item.getItemCount());
-          line.insert(26,item.getDescription());
+
+        for (Inventory item : inventory) {
+            line = new StringBuilder("                 ");
+            line.insert(0, item.getNameB());
+            line.insert(15, item.getType());
+            line.insert(23, item.getItemCount());
+            line.insert(26, item.getDescription());
 //        line.insert(53, item.getAquired());
-        
-        //display the line
-        System.out.println(line.toString());
+
+            //display the line
+            System.out.println(line.toString());
+
         }
+        InventoryMenuView inventoryMenu = new InventoryMenuView();
+        inventoryMenu.display();
     }
 
     private void viewMap() {
