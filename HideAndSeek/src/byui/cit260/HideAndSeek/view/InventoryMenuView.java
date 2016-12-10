@@ -5,6 +5,10 @@
  */
 package byui.cit260.HideAndSeek.view;
 
+import byui.cit260.HideAndSeek.enu.InventoryType;
+import byui.cit260.HideAndSeek.model.Game;
+import byui.cit260.HideAndSeek.model.Inventory;
+import hideandseek.HideAndSeek;
 import java.util.Scanner;
 
 /**
@@ -60,9 +64,34 @@ public class InventoryMenuView extends View{
         
     }
 
-    private void useAbilityPotion() {
-        this.console.println("\n*** useAbilityPotion() funtion called***");
-    }
+    public int useAbilityPotion() {
+//        Game game = HideAndSeek.getCurrentGame();
+//        Inventory[] inventory = game.getInventory();
+//                int itemCount =5;
+//                int newItemCount = itemCount-1;
+//                    do { 
+//                        boolean hasRun = false;
+//                        {
+//                
+//                           if (newItemCount > 0) {
+//                                this.console.println("You have replenished 1 ability point.");
+//                           }
+//                           else{
+//                                this.console.println("You do not have anymore Ability Potion.");
+//                    }
+//                             if(!hasRun) {
+//                                  hasRun = true;
+//                                    }          
+//    }
+//                
+//            
+//            }while(newItemCount > 0 && false);
+//            return newItemCount;
+//            }      
+//  
+// 
+//    
+    
 
     private void useAbilityElixer() {
         this.console.println("\n*** useAbilityElixer() funtion called***");
