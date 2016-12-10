@@ -8,17 +8,19 @@ import java.io.Serializable;
  */
 public enum ActorType implements Serializable {
 
-    Batman("Batman", "Hero of Gotham City. Teaches you Mega-Mind ability."),
-    Superman("Superman", "Hero of Metropolis. Teaches you the Flight ablility."),
-    Spiderman("Spiderman", "Hero of New York City. Teaches you the Super Sense ability."),
-    Siryn("Siryn", "Hero with super sonic voice. Teaches you the Sonar ability."),
-    Maul("Maul", "Villan of the game.");
+    Batman("Batman", "Gotham City", "Gives Mega-Mind ability."),
+    Superman("Superman", "Metropolis", "Gives Flight ablility."),
+    Spiderman("Spiderman", "New York City", "Gives Super Sense ability."),
+    Siryn("Siryn", "Unknown", "Gives the Sonar ability."),
+    Maul("Maul", "Dathomir", "Villan of the game.");
 
     private String name;
+    private String city;
     private String description;
 
-    private ActorType(String name, String description) {
+    private ActorType(String name, String city, String description) {
         this.name = name;
+        this.city = city;
         this.description = description;
     }
 
@@ -26,8 +28,16 @@ public enum ActorType implements Serializable {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getDescription() {
@@ -40,7 +50,7 @@ public enum ActorType implements Serializable {
 
     @Override
     public String toString() {
-        return "ActorType{" + "name=" + name + ", description=" + description + '}';
+        return "ActorType{" + "name=" + name + ", city=" + city + ", description=" + description + '}';
     }
-
+    
 }

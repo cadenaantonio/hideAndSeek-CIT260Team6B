@@ -1,5 +1,6 @@
 package byui.cit260.HideAndSeek.model;
 
+import byui.cit260.HideAndSeek.exceptions.ActorControlExeption;
 import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
@@ -10,37 +11,47 @@ import java.util.Objects;
  */
 public class Actor implements Serializable {
 
-    private final String description;
-    //private final Point coordinates;
+    private String name;
+    private String city;
+    private String description;
 
-    //private Player player;
-    //private Location location;
-    public Actor(String description) {
-        this.description = description;
-        //coordinates = new Point(1,1);
+//    public Actor(String description) {
+//        this.description = description;
+//    }
+
+    public Actor(){
+    }
+
+    public Actor(String string) {
+    }
+    
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getDescription() {
         return description;
     }
 
-//    public Point getCoordinates() {
-//        return coordinates;
-//}
-//
-//    public Player getPlayer() {
-//        return player;
-//    }
-//
-//    public void setPlayer(Player player) {
-//        this.player = player;
-//    }
-//
-//    public Location getLocation() {
-//        return location;
-//    }
-//
-//    public void setLocation(Location location) {
-//        this.location = location;
-//    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Actor{" + "name=" + name + ", city=" + city + ", description=" + description + '}';
+    }
+
 }

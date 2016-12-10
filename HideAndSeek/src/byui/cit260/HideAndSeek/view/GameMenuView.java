@@ -7,6 +7,7 @@ package byui.cit260.HideAndSeek.view;
 
 import byui.cit260.HideAndSeek.control.GameControl;
 import byui.cit260.HideAndSeek.control.MapControl;
+import byui.cit260.HideAndSeek.enu.ActorType;
 import byui.cit260.HideAndSeek.model.Game;
 import byui.cit260.HideAndSeek.model.Inventory;
 import byui.cit260.HideAndSeek.model.Location;
@@ -14,6 +15,11 @@ import byui.cit260.HideAndSeek.model.Map;
 import hideandseek.HideAndSeek;
 import java.util.Scanner;
 import byui.cit260.HideAndSeek.enu.InventoryType;
+import byui.cit260.HideAndSeek.model.Actor;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -35,7 +41,8 @@ public class GameMenuView extends View {
                 + "\nI - Inventory"
                 + "\nM - View Map"
                 + "\nH - Get help on how to play the game"
-                //                + "\nS - Save Game"
+                + "\nA - Display Actor List"
+                + "\nX - Print Actor List"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------------");
     }
@@ -73,9 +80,12 @@ public class GameMenuView extends View {
             case "H": // display the help menu 
                 this.displayHelpMenu();
                 break;
-//            case "S": // save the current game
-//                this.saveGame();
-//                break;
+            case "A": // display actor list
+                this.actorList("");
+                break;
+            case "X": // display actor list
+                this.actorListPrint();
+                break;
 //            case "Z": // TODO remove before finishing game
 //                Story2View storyview = new Story2View();
 //                storyview.display();
@@ -95,11 +105,65 @@ public class GameMenuView extends View {
         helpMenu.display();
     }
 
-    private void saveGame() {
-        this.console.println("\n*** startSaveGame function called ***");
-        //MainMenuView mainMenu = new MainMenuView();
-        //mainMenu.saveGame();
+    private void actorList(String filename) {
+        StringBuilder line;
+        boolean saveToFile = !(filename.isEmpty());
+        Game game = HideAndSeek.getCurrentGame();
+        FileWriter outFile = null;
+//        ActorType[] actors = ActorType.;
+        try {
+            if (saveToFile)
+                outFile = new FileWriter(filename);
+            this.console.println("\nList of Actors");
+        line = new StringBuilder("                                                                     ");
+        line.insert(1, "NAME");
+        line.insert(12, "CITY");
+        line.insert(30, "DESCRIPTION");
 
+        if (saveToFile)
+            outFile.write(line.toString()+"\r\n");
+        else 
+            this.console.println(line.toString());
+
+        for (ActorType item : ActorType.values()) {
+            line = new StringBuilder("                                                                     ");
+            line.insert(0, item.getName());
+            line.insert(10, item.getCity());
+            line.insert(25, item.getDescription());
+
+            if (saveToFile){
+                outFile.write(line.toString()+"\r\n");
+                outFile.flush();
+            }
+            else 
+                this.console.println(line.toString());
+        
+        }
+        } catch (Exception e) {
+            this.console.println("Error saving Actor List File:" + e.getMessage());
+        } finally {
+            if (outFile != null && saveToFile) {
+                try {
+                    outFile.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
+    
+    private void actorListPrint() {
+        String originalMenu = displayMessage;
+        displayMessage = ("\n\nEnter the file path for file where the actors file "
+                + "is to be saved.");
+        String filePath = this.getInput();
+        while (filePath.length() == 0) {            
+            this.console.println("Please enter a valid file name.");
+            filePath = this.getInput();
+        }
+        displayMessage = originalMenu;
+        actorList(filePath);
+        this.console.println("Your file has been saved to " + filePath + ".");
     }
 
     private void moveUp() {
@@ -225,7 +289,6 @@ public class GameMenuView extends View {
             }
             this.console.println("|");
 
-            
 //        StringBuilder line;
 ////        Game game = HideAndSeek.getCurrentGame();
 //        Location[][] loactions = map.getLocations();
@@ -235,7 +298,6 @@ public class GameMenuView extends View {
 //        line.insert(0, "SYMB");
 //        line.insert(6, "NAME");
 //        line.insert(26, "DESCRIPTION");
-
 //        this.console.println(line.toString());
 //
 //        for (Inventory scenes : inventory) {

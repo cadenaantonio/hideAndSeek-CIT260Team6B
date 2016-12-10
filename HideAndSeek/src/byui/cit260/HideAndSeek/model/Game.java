@@ -25,6 +25,7 @@ public class Game implements Serializable {
     private Map map;
 
     private Inventory[] inventory;
+    private Actor[] actors;
 
     public String getInstruction() {
         return Instruction;
@@ -64,6 +65,14 @@ public class Game implements Serializable {
 
     public void setInventory(Inventory[] inventory) {
         this.inventory = inventory;
+    }
+
+    public Actor[] getActors() {
+        return actors;
+    }
+
+    public void setActors(Actor[] actors) {
+        this.actors = actors;
     }
 
     @Override
