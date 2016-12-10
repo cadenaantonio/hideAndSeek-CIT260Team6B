@@ -1,0 +1,9 @@
+Heals one ability point
+Heals all ability points
+Cuts wires on bombs
+Helps freeze bombs
+Used to capture Villian
+Gives Villian's direction
+Sense if a bomb is nearby
+Narrows answers to a range
+Fly to location on the map

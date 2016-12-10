@@ -1,0 +1,12 @@
+
+LIST OF INVENTORY ITEMS
+NAME           TYPE   AMT DESCRIPTION          
+Ability Potion Healer  5  Heals one ability point            
+Ability Elixer Healer  1  Heals all ability points            
+Knife          Weapon  1  Cuts wires on bombs   
+Ice Gun        Weapon  1  Helps freeze bombs     
+Handcuffs      Weapon  1  Used to capture Villian       
+Sonar          Ability 3  Gives Villian's direction    
+Super Sense    Ability 5  Sense if a bomb is nearby          
+Mega Mind      Ability 1  Narrows answers to a range        
+Flight         Ability 2  Fly to location on the map     

@@ -95,6 +95,9 @@ public class GameMenuView extends View {
             case "P": // write map symbol list to file
                 this.sceneListPrint();
                 break;
+            case "B":
+                this.inventoryListPrint();
+                break;
 //            case "Z": // TODO remove before finishing game
 //                Story2View storyview = new Story2View();
 //                storyview.display();
@@ -264,7 +267,77 @@ public class GameMenuView extends View {
         InventoryMenuView inventoryMenu = new InventoryMenuView();
         inventoryMenu.display();
     }
+        private void inventoryList(String filename) {
+        StringBuilder line;
+        Game game = HideAndSeek.getCurrentGame();
+        Inventory[] inventory = game.getInventory();
+        boolean saveToFile = !(filename.isEmpty());
+        
+       
+        //Game game = HideAndSeek.getCurrentGame();
+        //InventoryType[] items = Inventory();
+        FileWriter outFile = null;
 
+        try {
+            if (saveToFile) {
+                outFile = new FileWriter(filename);
+            }
+
+        outFile.write("\nLIST OF INVENTORY ITEMS\r\n");    
+        line = new StringBuilder("                         ");
+        line.insert(0, "NAME");
+        line.insert(15, "TYPE");
+        line.insert(22, "AMT");
+        line.insert(26, "DESCRIPTION");
+
+            if (saveToFile) {
+                outFile.write(line.toString() + "\r\n");
+            } else {
+                this.console.println(line.toString());
+            }
+
+            for (Inventory item : inventory) {
+            line = new StringBuilder("                 ");
+            line.insert(0, item.getNameB());
+            line.insert(15, item.getType());
+            line.insert(23, item.getItemCount());
+            line.insert(26, item.getDescription());
+
+                if (saveToFile) {
+                    outFile.write(line.toString() + "\r\n");
+                    outFile.flush();
+                } else {
+                    this.console.println(line.toString()); //display the line
+                }
+            }
+        } catch (Exception e2) {
+            this.console.println("Error saving Actor List File:" + e2.getMessage());
+        } finally {
+            if (outFile != null && saveToFile) {
+                try {
+                    outFile.close();
+                } catch (IOException ex2) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex2);
+                }
+            }
+        }
+        }
+    
+    private void inventoryListPrint(){
+     String originalMenu = displayMessage;
+        displayMessage = ("\n\nEnter the file path for file where the Inventory file "
+                + "is to be saved.");
+        String filePath = this.getInput();
+        while (filePath.length() == 0) {
+            this.console.println("Please enter a valid file name.");
+            filePath = this.getInput();
+        }
+        displayMessage = originalMenu;
+        inventoryList(filePath);
+        this.console.println("Your file has been saved to " + filePath + ".");
+    }    
+        
+        
     private void viewMap() {
 
         String leftIndicator;
