@@ -65,32 +65,33 @@ public class InventoryMenuView extends View{
     }
 
     public int useAbilityPotion() {
-//        Game game = HideAndSeek.getCurrentGame();
-//        Inventory[] inventory = game.getInventory();
-//                int itemCount =5;
-//                int newItemCount = itemCount-1;
-//                    do { 
-//                        boolean hasRun = false;
-//                        {
-//                
-//                           if (newItemCount > 0) {
-//                                this.console.println("You have replenished 1 ability point.");
-//                           }
-//                           else{
-//                                this.console.println("You do not have anymore Ability Potion.");
-//                    }
-//                             if(!hasRun) {
-//                                  hasRun = true;
-//                                    }          
-//    }
-//                
-//            
-//            }while(newItemCount > 0 && false);
-//            return newItemCount;
-//            }      
-//  
-// 
-//    
+        Game game = HideAndSeek.getCurrentGame();
+        Inventory[] inventory = game.getInventory();
+                int itemCount =5;
+                int newItemCount = itemCount-1;
+                int originalItemCount = newItemCount;
+                    do { 
+                        boolean hasRun = false;
+                        {
+                
+                           if (newItemCount > 0) {
+                                this.console.println("You have replenished 1 ability point.");
+                           }
+                           else{
+                                this.console.println("You do not have anymore Ability Potion.");
+                    }
+                             if(!hasRun) {
+                                  hasRun = true;
+                                    }          
+    }
+                
+            newItemCount = itemCount;
+            }while(newItemCount > 0 && false);
+            return itemCount;
+            }      
+  
+ 
+    
     
 
     private void useAbilityElixer() {
