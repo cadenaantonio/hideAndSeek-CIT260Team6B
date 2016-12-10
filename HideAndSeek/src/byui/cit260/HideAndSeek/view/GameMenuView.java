@@ -15,6 +15,7 @@ import byui.cit260.HideAndSeek.model.Map;
 import hideandseek.HideAndSeek;
 import java.util.Scanner;
 import byui.cit260.HideAndSeek.enu.InventoryType;
+import byui.cit260.HideAndSeek.enu.SceneType;
 import byui.cit260.HideAndSeek.model.Actor;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -289,27 +290,29 @@ public class GameMenuView extends View {
             }
             this.console.println("|");
 
-//        StringBuilder line;
-////        Game game = HideAndSeek.getCurrentGame();
-//        Location[][] loactions = map.getLocations();
-//
-//        this.console.println("\nLIST OF MAP SYMBOLS");
-//        line = new StringBuilder("                  ");
-//        line.insert(0, "SYMB");
-//        line.insert(6, "NAME");
-//        line.insert(26, "DESCRIPTION");
-//        this.console.println(line.toString());
-//
-//        for (Inventory scenes : inventory) {
-//            line = new StringBuilder("                 ");
-//            line.insert(1, scenes.getSymbol());
-//            line.insert(6, scenes.getNameA());
-//            line.insert(26, scenes.getDescription());
-//
-//            //display the line
-//            this.console.println(line.toString());
-//
-//        }
+        
+        }
+        StringBuilder line;
+        //Game game = HideAndSeek.getCurrentGame();
+        //SceneType[] locations = SceneType();
+
+        this.console.println("\nLIST OF MAP SYMBOLS");
+        line = new StringBuilder("                                                                                                                                                                                                                              ");
+        line.insert(0, "SYMB");
+        line.insert(6, "NAME");
+        line.insert(28, "DESCRIPTION");
+
+        this.console.println(line.toString());
+
+        for (SceneType scene : SceneType.values()) {
+            line = new StringBuilder("                                                                                                                                                                                                                              ");
+            line.insert(1, scene.getSymbol());
+            line.insert(6, scene.getNameA());
+            line.insert(28, scene.getDescription());
+
+            //display the line
+            this.console.println(line.toString());
+
         }
     }
 }

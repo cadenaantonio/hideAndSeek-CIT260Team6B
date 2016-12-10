@@ -14,7 +14,7 @@ public enum SceneType implements Serializable {
     megsPark("Meg\'s Park", "MP", "A lush park known for hosting the winter festivle"),
     northStation("North Station", "NS", "A fire station at the north end of town"),
     westernStation("Western Station", "WS", "A fire station at the west side of town, strangely it doesn't have a story."),
-    centralPark("Central Park", "CP", " A mirror of New York City's Central Park it is known for it's carousel, however many of the animals have been switched out due to politcal correctness"),
+    centralPark("Central Park", "CP", "A mirror of New York City's Central Park it is known for it's carousel, however many of the animals have been switched out due to politcal correctness"),
     printShop("Print Shop", "PS", "Local print shop for all your business needs, will not print life size posters of actors."),
     movieTheater("Movie Theater", "MT", "Local movie theater, hey I think Groundhog Day is playing!"),
     cadenasHome("Cadena\'s Home", "CH", "The Cadena\'s House is a historical site known for the creation of the fabled Tin Man"),
@@ -56,5 +56,18 @@ public enum SceneType implements Serializable {
        public String description(){
         return this.description;
     }
+
+    public Object getNameA() {
+        return this.nameA;
+    }
+
+    public Object getSymbol() {
+        return this.symbol;
+    }
+
+    public Object getDescription() {
+        return this.description;
+    }
     
+       
 }
