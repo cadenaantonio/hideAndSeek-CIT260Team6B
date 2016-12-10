@@ -44,6 +44,8 @@ public class GameMenuView extends View {
                 + "\nH - Get help on how to play the game"
                 + "\nA - Display Actor List"
                 + "\nX - Print Actor List"
+                + "\nS - Display Map Symbol List"
+                + "\nP - Print Map Symbol List"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------------");
     }
@@ -87,6 +89,12 @@ public class GameMenuView extends View {
             case "X": // display actor list
                 this.actorListPrint();
                 break;
+            case "S": // display map symbol list
+                this.mapSymbols("");
+                break;
+            case "P": // write map symbol list to file
+                this.sceneListPrint();
+                break;
 //            case "Z": // TODO remove before finishing game
 //                Story2View storyview = new Story2View();
 //                storyview.display();
@@ -113,33 +121,35 @@ public class GameMenuView extends View {
         FileWriter outFile = null;
 //        ActorType[] actors = ActorType.;
         try {
-            if (saveToFile)
+            if (saveToFile) {
                 outFile = new FileWriter(filename);
-            this.console.println("\nList of Actors");
-        line = new StringBuilder("                                                                     ");
-        line.insert(1, "NAME");
-        line.insert(12, "CITY");
-        line.insert(30, "DESCRIPTION");
-
-        if (saveToFile)
-            outFile.write(line.toString()+"\r\n");
-        else 
-            this.console.println(line.toString());
-
-        for (ActorType item : ActorType.values()) {
-            line = new StringBuilder("                                                                     ");
-            line.insert(0, item.getName());
-            line.insert(10, item.getCity());
-            line.insert(25, item.getDescription());
-
-            if (saveToFile){
-                outFile.write(line.toString()+"\r\n");
-                outFile.flush();
             }
-            else 
+            this.console.println("\nList of Actors");
+            line = new StringBuilder("                                                                     ");
+            line.insert(1, "NAME");
+            line.insert(12, "CITY");
+            line.insert(30, "DESCRIPTION");
+
+            if (saveToFile) {
+                outFile.write(line.toString() + "\r\n");
+            } else {
                 this.console.println(line.toString());
-        
-        }
+            }
+
+            for (ActorType item : ActorType.values()) {
+                line = new StringBuilder("                                                                     ");
+                line.insert(0, item.getName());
+                line.insert(10, item.getCity());
+                line.insert(25, item.getDescription());
+
+                if (saveToFile) {
+                    outFile.write(line.toString() + "\r\n");
+                    outFile.flush();
+                } else {
+                    this.console.println(line.toString());
+                }
+
+            }
         } catch (Exception e) {
             this.console.println("Error saving Actor List File:" + e.getMessage());
         } finally {
@@ -152,13 +162,13 @@ public class GameMenuView extends View {
             }
         }
     }
-    
+
     private void actorListPrint() {
         String originalMenu = displayMessage;
         displayMessage = ("\n\nEnter the file path for file where the actors file "
                 + "is to be saved.");
         String filePath = this.getInput();
-        while (filePath.length() == 0) {            
+        while (filePath.length() == 0) {
             this.console.println("Please enter a valid file name.");
             filePath = this.getInput();
         }
@@ -290,29 +300,71 @@ public class GameMenuView extends View {
             }
             this.console.println("|");
 
-        
         }
+
+    }
+
+    private void mapSymbols(String filename) {
         StringBuilder line;
+        boolean saveToFile = !(filename.isEmpty());
         //Game game = HideAndSeek.getCurrentGame();
         //SceneType[] locations = SceneType();
+        FileWriter outFile = null;
 
-        this.console.println("\nLIST OF MAP SYMBOLS");
-        line = new StringBuilder("                                                                                                                                                                                                                              ");
-        line.insert(0, "SYMB");
-        line.insert(6, "NAME");
-        line.insert(28, "DESCRIPTION");
+        try {
+            if (saveToFile) {
+                outFile = new FileWriter(filename);
+            }
 
-        this.console.println(line.toString());
-
-        for (SceneType scene : SceneType.values()) {
+            this.console.println("\nLIST OF MAP SYMBOLS");
             line = new StringBuilder("                                                                                                                                                                                                                              ");
-            line.insert(1, scene.getSymbol());
-            line.insert(6, scene.getNameA());
-            line.insert(28, scene.getDescription());
+            line.insert(0, "SYMB");
+            line.insert(6, "NAME");
+            line.insert(28, "DESCRIPTION");
 
-            //display the line
-            this.console.println(line.toString());
+            if (saveToFile) {
+                outFile.write(line.toString() + "\r\n");
+            } else {
+                this.console.println(line.toString());
+            }
 
+            for (SceneType scene : SceneType.values()) {
+                line = new StringBuilder("                                                                                                                                                                                                                              ");
+                line.insert(1, scene.getSymbol());
+                line.insert(6, scene.getNameA());
+                line.insert(28, scene.getDescription());
+
+                if (saveToFile) {
+                    outFile.write(line.toString() + "\r\n");
+                    outFile.flush();
+                } else {
+                    this.console.println(line.toString()); //display the line
+                }
+            }
+        } catch (Exception e) {
+            this.console.println("Error saving Actor List File:" + e.getMessage());
+        } finally {
+            if (outFile != null && saveToFile) {
+                try {
+                    outFile.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
+    }
+
+    private void sceneListPrint() {
+        String originalMenu = displayMessage;
+        displayMessage = ("\n\nEnter the file path for file where the Scene Symbol file "
+                + "is to be saved.");
+        String filePath = this.getInput();
+        while (filePath.length() == 0) {
+            this.console.println("Please enter a valid file name.");
+            filePath = this.getInput();
+        }
+        displayMessage = originalMenu;
+        mapSymbols(filePath);
+        this.console.println("Your file has been saved to " + filePath + ".");
     }
 }

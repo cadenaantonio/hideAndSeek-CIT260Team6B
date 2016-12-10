@@ -8,8 +8,8 @@ import java.io.Serializable;
  */
 public enum SceneType implements Serializable {
 
-    smithsMarketplace("Smith\'s Marketplace", "SM", "Local grocery store"),
-    andersonHome("Anderson Home", "AH", "Historical landmark"),
+    smithsMarketplace("Smith\'s Marketplace", "SM", "Your average grocery store in Emerald City. Known to have great sales on Kumquats"),
+    andersonHome("Anderson Home", "AH", "The Anderson Home is a historical landmark commemorating the Anderson warriors that helped protect Emerald City during the Wicked Witch's reign."),
     hospital("Hospital", "HS", "The hospital, here for your medical emergencies and dramatic t.v. viewing."),
     megsPark("Meg\'s Park", "MP", "A lush park known for hosting the winter festivle"),
     northStation("North Station", "NS", "A fire station at the north end of town"),

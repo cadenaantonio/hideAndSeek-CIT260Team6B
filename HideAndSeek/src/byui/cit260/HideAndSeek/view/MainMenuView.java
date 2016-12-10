@@ -82,16 +82,24 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        this.console.println("\n\nEnter the file path for file where the game "
+        String originalMenu = displayMessage;
+        displayMessage = ("\n\nEnter the file path for file where the game "
                 + "is to be saved.");
         String filePath = this.getInput();
+        while (filePath.length() == 0) {
+            this.console.println("Please enter a valid file name.");
+            filePath = this.getInput();
+        }
 
         try {
             //save the game to a specified file
             GameControl.saveGame(HideAndSeek.getCurrentGame(), filePath);
+            displayMessage = originalMenu;
+        this.console.println("Your file has been saved to " + filePath + ".");
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
+        
     }
 
 }
