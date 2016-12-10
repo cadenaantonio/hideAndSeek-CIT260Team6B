@@ -35,7 +35,7 @@ public class GameMenuView extends View {
                 + "\nI - Inventory"
                 + "\nM - View Map"
                 + "\nH - Get help on how to play the game"
-//                + "\nS - Save Game"
+                //                + "\nS - Save Game"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------------");
     }
@@ -173,8 +173,6 @@ public class GameMenuView extends View {
         line.insert(22, "AMT");
         line.insert(26, "DESCRIPTION");
 
-//        line.insert(320,"AQUIRED");
-//        line.insert(50,"REQUIRED") Potentially Add to Code? HandCuffs? TODO
         this.console.println(line.toString());
 
         for (Inventory item : inventory) {
@@ -183,7 +181,6 @@ public class GameMenuView extends View {
             line.insert(15, item.getType());
             line.insert(23, item.getItemCount());
             line.insert(26, item.getDescription());
-//        line.insert(53, item.getAquired());
 
             //display the line
             this.console.println(line.toString());
@@ -227,6 +224,30 @@ public class GameMenuView extends View {
                 }
             }
             this.console.println("|");
+
+            
+//        StringBuilder line;
+////        Game game = HideAndSeek.getCurrentGame();
+//        Location[][] loactions = map.getLocations();
+//
+//        this.console.println("\nLIST OF MAP SYMBOLS");
+//        line = new StringBuilder("                  ");
+//        line.insert(0, "SYMB");
+//        line.insert(6, "NAME");
+//        line.insert(26, "DESCRIPTION");
+
+//        this.console.println(line.toString());
+//
+//        for (Inventory scenes : inventory) {
+//            line = new StringBuilder("                 ");
+//            line.insert(1, scenes.getSymbol());
+//            line.insert(6, scenes.getNameA());
+//            line.insert(26, scenes.getDescription());
+//
+//            //display the line
+//            this.console.println(line.toString());
+//
+//        }
         }
     }
 }

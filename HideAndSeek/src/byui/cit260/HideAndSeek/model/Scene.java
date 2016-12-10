@@ -10,7 +10,7 @@ import java.util.Objects;
  */
 public class Scene implements Serializable {
 
-    private String name;
+    private String nameA;
     public String description;
     private String symbol;
 
@@ -20,7 +20,7 @@ public class Scene implements Serializable {
 
     public Scene() {
 
-        this.name = "";
+        this.nameA = "";
         this.symbol = "";
         this.description = "";
 
@@ -31,7 +31,7 @@ public class Scene implements Serializable {
 
     public Scene(String name, String symbol, String description) {
 
-        this.name = name;
+        this.nameA = nameA;
         this.symbol = symbol;
         this.description = description;
 
@@ -40,12 +40,12 @@ public class Scene implements Serializable {
 
     }
 
-    public String getName() {
-        return name;
+    public String getNameA() {
+        return nameA;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameA(String nameA) {
+        this.nameA = nameA;
     }
 
     public String getDescription() {
@@ -83,7 +83,7 @@ public class Scene implements Serializable {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 17 * hash + Objects.hashCode(this.name);
+        hash = 17 * hash + Objects.hashCode(this.nameA);
         hash = 17 * hash + Objects.hashCode(this.description);
         hash = 17 * hash + Objects.hashCode(this.symbol);
         hash = 17 * hash + Objects.hashCode(this.bomb);
@@ -103,7 +103,7 @@ public class Scene implements Serializable {
             return false;
         }
         final Scene other = (Scene) obj;
-        if (!Objects.equals(this.name, other.name)) {
+        if (!Objects.equals(this.nameA, other.nameA)) {
             return false;
         }
         if (!Objects.equals(this.description, other.description)) {
@@ -123,7 +123,7 @@ public class Scene implements Serializable {
 
     @Override
     public String toString() {
-        return "Scene{" + "name=" + name + ", description=" + description + ", symbol=" + symbol + '}';
+        return "Scene{" + "nameA=" + nameA + ", description=" + description + ", symbol=" + symbol + '}';
     }
 
 }
