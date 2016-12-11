@@ -228,9 +228,7 @@ public class GameMenuView extends View {
 
     private void displaySearchTheAreaMenu() {
         
-        //if(MapContorl.currentScene){
-            
-        //}
+        
         
         SearchTheAreaView searchTheAreaMenu = new SearchTheAreaView();
         searchTheAreaMenu.display();

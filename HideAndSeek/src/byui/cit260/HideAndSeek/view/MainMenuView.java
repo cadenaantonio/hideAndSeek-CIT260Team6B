@@ -21,9 +21,9 @@ public class MainMenuView extends View {
                 + "\n| Main Menu                                    "
                 + "\n-----------------------------------------------"
                 + "\nN - Start New Game"
+                + "\nS - Save Game"
                 + "\nG - Get and Start Saved Game"
                 + "\nH - Get help on how to play the game"
-                + "\nS - Save Game"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------------");
     }
@@ -65,10 +65,18 @@ public class MainMenuView extends View {
     }
 
     private void startExsitingGame() {
-        this.console.println("\n\nEnter the file path for file where the game " + "was saved last.");
+        String originalMenu = displayMessage;
+        displayMessage = ("\n\nEnter the file path for file where the game "
+                + "has been saved.\n");
         String filePath = this.getInput();
         try {
             GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        try {
+            displayMessage = originalMenu;
+        this.console.println("\nWelcome back.");
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
