@@ -98,11 +98,10 @@ public class GameMenuView extends View {
             case "B":
                 this.inventoryListPrint();
                 break;
-//            case "Z": // TODO remove before finishing game
-//                Story2View storyview = new Story2View();
-//                storyview.display();
-//                break;
-
+            case "Z": // TODO remove before finishing game
+                Story3View storyview = new Story3View();
+                storyview.display();
+                break;
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
                 break;

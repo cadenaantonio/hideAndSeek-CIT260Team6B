@@ -29,7 +29,7 @@ public class Story3View extends View {
 
         while (!valid) {
             if (radius < 0) { //Validates that all numbers are grater than 0 or positive
-                System.out.println("\n*** You must enter a valid number ***"); //Error message to user number is negative
+                this.console.println("\n*** You must enter a valid number ***"); //Error message to user number is negative
             }
         }
 
@@ -46,7 +46,7 @@ public class Story3View extends View {
             try {
                 height = Double.parseDouble(sHeight);
             } catch (NumberFormatException e) {
-                System.out.println("\n Please enter a valid number.");
+                this.console.println("\n Please enter a valid number.");
                 return height = -1;
             }
         } while (height <= 0);
@@ -61,18 +61,21 @@ public class Story3View extends View {
         try {
             radius = Double.parseDouble(value);
         } catch (NumberFormatException e) {
-            System.out.println("\n Please enter a valid number.");
+            this.console.println("\n Please enter a valid number.");
             return false;
         }
         double height = getHeight();
         QuestionControl instance = new QuestionControl();
         try {
             double areaR = instance.calcAreaBarrel(radius, height);
-            System.out.println("The area of your barrel is " + areaR + ".");
+            this.console.println("The area of your barrel is " + areaR + ".");
         } catch (QuestionControlException ex) {
             Logger.getLogger(Story3View.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
+        GameOver gameOver = new GameOver();
+        gameOver.display();
         return true;
     }
 }
+m

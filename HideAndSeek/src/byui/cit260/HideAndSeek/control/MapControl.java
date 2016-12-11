@@ -5,6 +5,7 @@ import byui.cit260.HideAndSeek.model.Actor;
 import byui.cit260.HideAndSeek.model.Bomb;
 import byui.cit260.HideAndSeek.model.Map;
 import byui.cit260.HideAndSeek.model.Scene;
+import byui.cit260.HideAndSeek.view.Story3View;
 
 /**
  *
@@ -51,7 +52,7 @@ public class MapControl {
         currentScene.setActor(new Actor(""));
         currentScene.setBomb(new Bomb("", ""));
         scenes[SceneType.smithsMarketplace.ordinal()] = currentScene;
-
+        
         currentScene = new Scene("Anderson Home", "AH", "The Anderson Home is a historical landmark commemorating the Anderson warriors that helped protect Emerald City during the Wicked Witch's reign.");
         currentScene.setActor(new Actor(""));
         currentScene.setBomb(new Bomb("", ""));
