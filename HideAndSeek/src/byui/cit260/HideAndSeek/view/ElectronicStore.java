@@ -12,20 +12,15 @@ import hideandseek.HideAndSeek;
  *
  * @author Antonio Cadena
  */
-public class GameOver extends View {
+public class ElectronicStore extends View{
 
-    public GameOver() {
-        super("*******************************************************************"
-            + "\n*******************************************************************"
-            + "\n**                                                               **"
-            + "\n**                       Game Over!                              **"
-            + "\n**                                                               **"
-            + "\n**                   Press 'Q' to quit.                          **"
-            + "\n**                                                               **"
-            + "\n*******************************************************************"
-            + "\n*******************************************************************");
+    public ElectronicStore() {
+        super("There is nothing left except the bruised "
+            + "\n walls keeping the roof from colapsing."
+            + "\n You know deep down in your heart that "
+            + "\n Maul was here. Continue to search for "
+            + "\n him.");
     }
-
     @Override
     public boolean doAction(String value) {
 
@@ -48,3 +43,4 @@ public class GameOver extends View {
         gameMenu.display();
     }
 }
+

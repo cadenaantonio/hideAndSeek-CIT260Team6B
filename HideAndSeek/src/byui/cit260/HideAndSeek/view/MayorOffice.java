@@ -12,20 +12,17 @@ import hideandseek.HideAndSeek;
  *
  * @author Antonio Cadena
  */
-public class GameOver extends View {
+public class MayorOffice extends View{
 
-    public GameOver() {
-        super("*******************************************************************"
-            + "\n*******************************************************************"
-            + "\n**                                                               **"
-            + "\n**                       Game Over!                              **"
-            + "\n**                                                               **"
-            + "\n**                   Press 'Q' to quit.                          **"
-            + "\n**                                                               **"
-            + "\n*******************************************************************"
-            + "\n*******************************************************************");
+    public MayorOffice(String message) {
+          super(" The Mayor is currently out of the office "
+            + "\n due to an unexpected meeting with the    "
+            + "\n Chief of Police. He was worried about a  "
+            + "\n suspicious package that was left outside "
+            + "\n his office. As you examine the package   "
+            + "\n you realize that you have a bomb and you "
+            + "\n need to disarm it before it goes off.    ");
     }
-
     @Override
     public boolean doAction(String value) {
 

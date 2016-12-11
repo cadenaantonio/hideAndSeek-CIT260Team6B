@@ -12,20 +12,15 @@ import hideandseek.HideAndSeek;
  *
  * @author Antonio Cadena
  */
-public class GameOver extends View {
+public class Library extends View{
 
-    public GameOver() {
-        super("*******************************************************************"
-            + "\n*******************************************************************"
-            + "\n**                                                               **"
-            + "\n**                       Game Over!                              **"
-            + "\n**                                                               **"
-            + "\n**                   Press 'Q' to quit.                          **"
-            + "\n**                                                               **"
-            + "\n*******************************************************************"
-            + "\n*******************************************************************");
+    public Library() {
+          super("Maul is here! Be prepared to fight as "
+            + "\n you enter the building and expect    "
+            + "\n heavy damage. Durring the battle you "
+            + "\n droped you knife and took  heavy     "
+            + "\n health loss.                         ");
     }
-
     @Override
     public boolean doAction(String value) {
 

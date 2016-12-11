@@ -12,20 +12,15 @@ import hideandseek.HideAndSeek;
  *
  * @author Antonio Cadena
  */
-public class GameOver extends View {
+public class SmithsMarketplace extends View{
 
-    public GameOver() {
-        super("*******************************************************************"
-            + "\n*******************************************************************"
-            + "\n**                                                               **"
-            + "\n**                       Game Over!                              **"
-            + "\n**                                                               **"
-            + "\n**                   Press 'Q' to quit.                          **"
-            + "\n**                                                               **"
-            + "\n*******************************************************************"
-            + "\n*******************************************************************");
+    public SmithsMarketplace() {
+        super("You have made it to Smith's MarketPlace. "
+            + "\n There is not much for you do here     "
+            + "\n except to grab some snacks and build  "
+            + "\n up your energy as you travel through  "
+            + "\n this great game.");
     }
-
     @Override
     public boolean doAction(String value) {
 

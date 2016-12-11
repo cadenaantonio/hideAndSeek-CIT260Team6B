@@ -12,20 +12,14 @@ import hideandseek.HideAndSeek;
  *
  * @author Antonio Cadena
  */
-public class GameOver extends View {
+public class DoctorsClinic extends View{
 
-    public GameOver() {
-        super("*******************************************************************"
-            + "\n*******************************************************************"
-            + "\n**                                                               **"
-            + "\n**                       Game Over!                              **"
-            + "\n**                                                               **"
-            + "\n**                   Press 'Q' to quit.                          **"
-            + "\n**                                                               **"
-            + "\n*******************************************************************"
-            + "\n*******************************************************************");
+    public DoctorsClinic() {
+          super("There is no sign of Maul being here.   "
+            + "\n Since you at the Dr's office you might"
+            + "\n as well get a physical.               "
+            + "\n        Gain one Ability Elixer        ");
     }
-
     @Override
     public boolean doAction(String value) {
 

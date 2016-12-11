@@ -12,20 +12,14 @@ import hideandseek.HideAndSeek;
  *
  * @author Antonio Cadena
  */
-public class GameOver extends View {
+public class EasternStation extends View{
 
-    public GameOver() {
-        super("*******************************************************************"
-            + "\n*******************************************************************"
-            + "\n**                                                               **"
-            + "\n**                       Game Over!                              **"
-            + "\n**                                                               **"
-            + "\n**                   Press 'Q' to quit.                          **"
-            + "\n**                                                               **"
-            + "\n*******************************************************************"
-            + "\n*******************************************************************");
+    public EasternStation() {
+            super("Eastern Station is located underground "
+            + "\n and due to all the fighting up above    "
+            + "\n the lights are out. You need to use your"
+            + "\n sonar ability to locate the bomb.       ");
     }
-
     @Override
     public boolean doAction(String value) {
 

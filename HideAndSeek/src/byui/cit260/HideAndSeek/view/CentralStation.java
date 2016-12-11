@@ -12,20 +12,12 @@ import hideandseek.HideAndSeek;
  *
  * @author Antonio Cadena
  */
-public class GameOver extends View {
+public class CentralStation extends View{
 
-    public GameOver() {
-        super("*******************************************************************"
-            + "\n*******************************************************************"
-            + "\n**                                                               **"
-            + "\n**                       Game Over!                              **"
-            + "\n**                                                               **"
-            + "\n**                   Press 'Q' to quit.                          **"
-            + "\n**                                                               **"
-            + "\n*******************************************************************"
-            + "\n*******************************************************************");
+    public CentralStation() {
+        super("Maul left behind a bomb at this location. "
+            + "\n Use your ice gun to disarm the bomb.   ");
     }
-
     @Override
     public boolean doAction(String value) {
 

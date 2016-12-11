@@ -12,20 +12,18 @@ import hideandseek.HideAndSeek;
  *
  * @author Antonio Cadena
  */
-public class GameOver extends View {
+public class AntoniosPark extends View {
 
-    public GameOver() {
-        super("*******************************************************************"
-            + "\n*******************************************************************"
-            + "\n**                                                               **"
-            + "\n**                       Game Over!                              **"
-            + "\n**                                                               **"
-            + "\n**                   Press 'Q' to quit.                          **"
-            + "\n**                                                               **"
-            + "\n*******************************************************************"
-            + "\n*******************************************************************");
+    public AntoniosPark() {
+        super("As you pull into the parking lot you catch "
+            + "\n a glimps of Maul. Ready for action, you "
+            + "\n jump out and try to slap on them        "
+            + "\n handcuffs. Unfortunately its not that   "
+            + "\n easy. You take a roundhouse kick to the "
+            + "\n mandible and pass out. When you come to "
+            + "\n Maul is no where in sight. Contineu to  "
+            + "\n search for him.");
     }
-
     @Override
     public boolean doAction(String value) {
 

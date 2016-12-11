@@ -78,4 +78,3 @@ public class Story3View extends View {
         return true;
     }
 }
-m
