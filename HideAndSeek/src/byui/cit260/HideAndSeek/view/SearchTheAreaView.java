@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author Katherine
  */
 public class SearchTheAreaView extends View {
-
+    
     public SearchTheAreaView() {
         super("\n"
                 + "\n-----------------------------------------------"
@@ -25,7 +25,7 @@ public class SearchTheAreaView extends View {
                 + "\n-----------------------------------------------");
 
     }
-
+    
     @Override
     public boolean doAction(String value) {
         value = value.toUpperCase(); // convert value to upper case
