@@ -20,7 +20,7 @@ public class GameOver extends View {
             + "\n**                                                               **"
             + "\n**                       Game Over!                              **"
             + "\n**                                                               **"
-            + "\n**                   Press 'Q' to quit.                          **"
+            + "\n**                   Press 'N' to quit.                          **"
             + "\n**                                                               **"
             + "\n*******************************************************************"
             + "\n*******************************************************************");
@@ -32,7 +32,7 @@ public class GameOver extends View {
         value = value.toUpperCase();
 
         switch (value) {
-            case "Q":
+            case "N":
                 this.quit();
                 break;
             default:
