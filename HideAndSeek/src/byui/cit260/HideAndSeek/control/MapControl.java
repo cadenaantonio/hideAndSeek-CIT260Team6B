@@ -26,9 +26,9 @@ public class MapControl {
         return map;
     }
 
-    static void moveActorToStartingLocation(Map map) {
-        System.out.println("*** called moveActorToStartingLocation()  ***");
-    }
+//    static void moveActorToStartingLocation(Map map) {
+//        System.out.println("*** called moveActorToStartingLocation()  ***");
+//    }
 
     public static void movePlayerToStartingLocation(Map map) {
         // movePlayer(map, 2, 2);
